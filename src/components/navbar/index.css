@@ -1,0 +1,37 @@
+.navbar-container {
+	display: flex;
+	margin: 20px;
+	align-items: center;
+}
+
+.navbar-emblem {
+	font-size: 40px;
+	font-family: 'Courier New';
+	flex: 1;
+	display: flex;
+}
+
+.navbar-emblem a {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-decoration: none;
+}
+
+.navbar-emblem img {
+	height: 60px;
+	width: auto;
+}
+
+.navbar-items {
+	font-family: 'Open Sans';
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+}
+
+@media screen and (max-width: 1000px) {   
+	.navbar-emblem img {
+		height: 40px;
+    }
+}

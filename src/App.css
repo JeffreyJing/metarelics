@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@400;700&display=swap');
+
+:root {
+	--main-color: white;
+	--hover-color: rgb(112, 109, 109);
+	--accent-color: rgb(143, 141, 141);
+	--side-margin: 10vw;
+	--side-margin-mobile: 5vw;
+}
+
+html, body {
+	background-color: black;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	color: var(--main-color);
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+button {
+	background: none;
+	color: var(--main-color);
+	border: 2px solid var(--main-color);
+	border-radius: 4px;
+	padding: 8px;
+	cursor: pointer;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+
+	transition: box-shadow 250ms ease;
+}
+
+button:hover {
+	box-shadow: 0px 0px 6px 2px var(--hover-color);
+}
+
+a, a:visited {
+	color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+}
