@@ -3,6 +3,11 @@
 	src: url(./assets/fonts/interstatebold.otf) format('opentype');
 }
 
+@font-face {
+	font-family: 'Interstate Light';
+	src: url(./assets/fonts/interstatelight.otf) format('opentype');
+}
+
 :root {
 	--main-color: white;
 	--hover-color: rgb(112, 109, 109);
