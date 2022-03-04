@@ -73,7 +73,6 @@ const Home = () => {
 					<div className='projects-item'>
 						?
 					</div>
-					<p></p>
 				</div>
 			</div>
 			)}

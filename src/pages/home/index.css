@@ -16,7 +16,7 @@
 	background-color: black;
 	padding-left: var(--side-margin);
 	padding-right: var(--side-margin);
-	padding-top: 50px;
+	padding-top: 70px;
 	padding-bottom: 50px;
 	text-align: center;
 	color: white;
@@ -33,6 +33,8 @@
 }
 
 .projects-coming-soon {
+	margin-top: 70px;
+	margin-bottom: 70px;
 	margin-left: 20vw;
 	margin-right: 20vw;
 }
@@ -147,6 +149,8 @@
 	.projects-coming-soon {
 		margin-left: 10vw;
 		margin-right: 10vw;
+		margin-top: 40px;
+		margin-bottom: 20px;
 	}
 	
 	.projects-items {
