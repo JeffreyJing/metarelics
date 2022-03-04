@@ -25,7 +25,7 @@ export const Team = () => {
                     <div className='team-member' key={name}>
                         
                         <p>
-                            <div class="box">
+                            <div className="box">
                                 <h1>{name}</h1>
                                 {description}
                             </div>

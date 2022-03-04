@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './index.css';
 import { Banner } from '../../components/banner';
 import sneaksOfNature from '../../assets/images/sneaksofnature.png';
-import { INSTAGRAM_URL, TWITTER_URL } from '../../constants';
-import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
+import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
+import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
 import teamImg from '../../assets/images/team.png';
 import buildOurBond from '../../assets/images/buildourbond.jpg';
 
@@ -168,6 +168,24 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div className='footbar'>
+				{width > 1000 && (
+					<div className='footbar-r-logo'></div>
+				)}
+				<div className='footbar-logos'>
+					<a href={TWITTER_URL} rel='noopener noreferrer'><TwitterLogo /></a>
+					<a href={INSTAGRAM_URL} rel='noopener noreferrer'><InstagramLogo /></a>
+					<a href={DISCORD_URL} rel='noopener noreferrer'><DiscordLogo /></a>
+				</div>
+				<div className='footbar-powered-by'>
+					<p>Powered By Ikonick</p>
+					<p>&copy; Copyright 2022 - Metarelics</p>
+				</div>
+				{width < 1000 && (
+					<div className='footbar-r-logo'></div>
+				)}
 			</div>
 		</>
 	);

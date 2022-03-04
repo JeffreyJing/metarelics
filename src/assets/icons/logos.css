@@ -42,4 +42,11 @@ a:hover, .navbar-logo:hover {
 		height: 27px;
 		width: 27px;
 	}
+
+	.build-bond-logo {
+		color: black;
+		fill: black;
+		height: 100px;
+		width: 100px;
+	}
 }
