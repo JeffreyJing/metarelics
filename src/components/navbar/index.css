@@ -9,7 +9,7 @@
 
 .navbar-emblem {
 	font-size: 40px;
-	font-family: 'Courier New';
+	font-family: 'Interstate Bold';
 	text-align: center;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .navbar-items {
-	font-family: 'Open Sans';
+	font-family: 'Interstate Bold';
 	display: flex;
 	column-gap: 15px;
 	align-items: center;

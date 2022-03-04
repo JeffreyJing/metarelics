@@ -1,11 +1,11 @@
 .home-welcome {
-    font-family: "Open Sans";
+    font-family: "Interstate Bold";
     margin-left: var(--side-margin);
     margin-right: var(--side-margin);
 }
 
 .home-welcome-list {
-    font-family: "Open Sans";
+    font-family: "Interstate Bold";
     margin-top: 20px;
     display: grid;
     grid-auto-flow: column;

@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@400;700&display=swap');
+@font-face {
+	font-family: 'Interstate Bold';
+	src: url(./assets/fonts/interstatebold.otf) format('opentype');
+}
 
 :root {
 	--main-color: white;
@@ -10,7 +13,7 @@
 
 html, body {
 	/* background-color: black; */
-	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-family: 'Interstate Bold', Helvetica, sans-serif;
 	color: var(--main-color);
 	padding: 0px;
 	margin: 0px;
@@ -18,13 +21,16 @@ html, body {
 }
 
 button {
-	background: none;
+	background: black;
 	color: var(--main-color);
-	border: 2px solid var(--main-color);
-	border-radius: 4px;
+	/* border: 2px solid var(--main-color); */
+	border: none;
+	border-radius: 8px;
 	padding: 8px;
 	cursor: pointer;
-	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-family: 'Interstate Bold', Helvetica, sans-serif;
+	width: 70%;
+	font-size: 20px;
 
 	transition: box-shadow 250ms ease;
 }
@@ -38,5 +44,5 @@ a, a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Interstate Bold', sans-serif;
 }
