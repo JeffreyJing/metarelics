@@ -3,8 +3,9 @@ import './index.css';
 import { Banner } from '../../components/banner';
 import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 import { INSTAGRAM_URL, TWITTER_URL } from '../../constants';
-import { InstagramLogo, TwitterLogo } from '../../assets/icons/logos';
+import { BuildOurBond, CreateOurCulture, ForgeOurFuture, InstagramLogo, PreserveOurPast, TwitterLogo } from '../../assets/icons/logos';
 import teamImg from '../../assets/images/team.png';
+import buildOurBond from '../../assets/images/buildourbond.jpg';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -106,6 +107,67 @@ const Home = () => {
 					<div className='team-picture'>
 					</div>
 				)}
+			</div>
+
+			<div className='mission'>
+				<h2>METARELICS MISSION</h2>
+				<div className='mission-items'>
+					<div className='mission-item'>
+						<PreserveOurPast />
+						<p>PRESERVE OUR PAST</p>
+					</div>
+					<div className='mission-item'>
+						<CreateOurCulture />
+						<p>CREATE OUR CULTURE</p>
+					</div>
+					<div className='mission-item'>
+						<ForgeOurFuture />
+						<p>FORGE OUR FUTURE</p>
+					</div>
+				</div>
+			</div>
+
+			<div className='build-our-bond'>
+				<img src={buildOurBond} />
+				<div className='build-our-bond-content'>
+					<div className='build-our-bond-intro'>
+						<BuildOurBond />
+						<h2>BUILD OUR BOND</h2>
+						<p>The goal of Metarelics is to continuously increase the strength of our collective. The value of a collection is only as strong as its foundation. Our core values are the bond that holds it all together. No one person is more important than the value of the collective. We empower a space that amplifies every voice throughout our commuity. The people that occupy our community will preserve our culture. In the end, we are what we leave behind.</p>
+					</div>
+					<div className='build-our-bond-items'>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>VALUE FIRST</h2>
+							<p>Give more than you take</p>
+						</div>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>EVERY VOICE MATTERS</h2>
+							<p>Diversity is the one thing we all have in common</p>
+						</div>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>DEEPER NOT WIDER</h2>
+							<p>He who chases two rabbits, catches none</p>
+						</div>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>BE CURIOUS</h2>
+							<p>These are the people who change the world</p>
+						</div>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>PURSUE YOUR POTENTIAL</h2>
+							<p>Hard work beats talent</p>
+						</div>
+						<div className='build-our-bond-item'>
+							<BuildOurBond />
+							<h2>EXECUTE</h2>
+							<p>A good plan is not enough</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);

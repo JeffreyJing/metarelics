@@ -145,6 +145,70 @@
 	background-position: center;
 }
 
+.mission {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-left: var(--side-margin);
+	padding-right: var(--side-margin);
+	background-color: black;
+	margin-top: 0px;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+
+.mission-items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 20%;
+}
+
+.mission h2 {
+	margin-top: 0px;
+}
+
+.mission p {
+	margin-top: 0px;
+}
+
+.build-our-bond {
+	position: relative;
+	overflow: hidden;
+}
+
+.build-our-bond img {
+	width: 150%;
+	margin-top: -70%;
+	margin-left: -26%;
+}
+
+.build-our-bond-content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 60%;
+	margin-top: 50px;
+	margin-left: 6vw;
+	margin-right: 6vw;
+	color: white;
+	text-align: center;
+}
+
+.build-our-bond-content h2 {
+	font-size: 30px;
+}
+
+.build-our-bond-content p {
+	font-family: 'Interstate Light';
+	font-size: 20px;
+}
+
+.build-our-bond-items {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 1000px) {
 	.projects-coming-soon {
 		margin-left: 10vw;
@@ -186,6 +250,31 @@
 		display: flex;
 		column-gap: 15px;
 		justify-content: center;
+	}
+
+	.mission {
+		padding-top: 70px;
+		padding-bottom: 70px;
+		padding-left: var(--side-margin);
+		padding-right: var(--side-margin);
+		background-color: black;
+		margin-top: 0px;
+		color: white;
+		text-align: center;
+		font-size: 40px;
+	}
+	
+	.mission-items {
+		grid-template-columns: 1fr;
+		column-gap: 15%;
+	}
+	
+	.mission h2 {
+		margin-top: 0px;
+	}
+	
+	.mission p {
+		margin-top: 0px;
 	}
 }
 

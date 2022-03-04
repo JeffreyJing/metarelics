@@ -1,3 +1,17 @@
+.mission-logo {
+	color: gray;
+	fill: gray;
+	height: 60%;
+	width: 60%;
+}
+
+.build-bond-logo {
+	color: black;
+	fill: black;
+	height: 150px;
+	width: 150px;
+}
+
 .navbar-logo {
 	color: black;
 	fill: black;
