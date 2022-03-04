@@ -3,7 +3,7 @@ import './index.css';
 import { Banner } from '../../components/banner';
 import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 import { INSTAGRAM_URL, TWITTER_URL } from '../../constants';
-import { BuildOurBond, CreateOurCulture, ForgeOurFuture, InstagramLogo, PreserveOurPast, TwitterLogo } from '../../assets/icons/logos';
+import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
 import teamImg from '../../assets/images/team.png';
 import buildOurBond from '../../assets/images/buildourbond.jpg';
 
@@ -137,32 +137,32 @@ const Home = () => {
 					</div>
 					<div className='build-our-bond-items'>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<ValueFirst />
 							<h2>VALUE FIRST</h2>
 							<p>Give more than you take</p>
 						</div>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<EveryVoiceMatters />
 							<h2>EVERY VOICE MATTERS</h2>
 							<p>Diversity is the one thing we all have in common</p>
 						</div>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<DeeperNotWider />
 							<h2>DEEPER NOT WIDER</h2>
 							<p>He who chases two rabbits, catches none</p>
 						</div>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<BeCurious />
 							<h2>BE CURIOUS</h2>
 							<p>These are the people who change the world</p>
 						</div>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<PursueYourPotential />
 							<h2>PURSUE YOUR POTENTIAL</h2>
 							<p>Hard work beats talent</p>
 						</div>
 						<div className='build-our-bond-item'>
-							<BuildOurBond />
+							<Execute />
 							<h2>EXECUTE</h2>
 							<p>A good plan is not enough</p>
 						</div>

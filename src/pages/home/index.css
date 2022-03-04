@@ -178,7 +178,7 @@
 
 .build-our-bond img {
 	width: 150%;
-	margin-top: -70%;
+	margin-top: -66%;
 	margin-left: -26%;
 }
 
@@ -207,9 +207,21 @@
 	margin-top: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 50px;
 }
 
 @media screen and (max-width: 1000px) {
+	.build-our-bond img {
+		width: 600%;
+		margin-top: 0%;
+		margin-left: -150%;
+		/* margin-bottom: -150%; */
+	}
+
+	.build-our-bond-items {
+		grid-template-columns: 1fr;
+	}
+
 	.projects-coming-soon {
 		margin-left: 10vw;
 		margin-right: 10vw;
