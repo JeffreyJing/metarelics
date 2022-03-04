@@ -100,17 +100,14 @@
 }
 
 @media screen and (max-width: 1000px) {
-	.home-side-by-side {
-		margin-left: 20px;
-		margin-right: 20px;
-		grid-template-columns: 1fr;
-		grid-template-rows: auto auto;
+	.projects-coming-soon {
+		margin-left: 10vw;
+		margin-right: 10vw;
 	}
-}
-
-@media screen and (max-width: 540px) {
-	.home-about-container {
-		font-size: 1rem;
+	
+	.projects-items {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr 2fr 1fr;
 	}
 }
 

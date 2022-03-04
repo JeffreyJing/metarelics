@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import { Banner } from '../../components/banner';
 import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 
 const Home = () => {
+	const [width, setWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+        window.addEventListener("resize", () => {
+            setWidth(window.innerWidth);
+        });
+    }, []);
+	
 	return (
 		<>
 			<Banner />
@@ -23,7 +31,29 @@ const Home = () => {
 				<p>EXCLUSIVE COMMUNITY EVENTS ON &amp; OFFLINE</p>  
 			</div>
 
-			<div className='projects-coming-soon'>
+			{width > 1000 && (
+				<div className='projects-coming-soon'>
+					<h2>PROJECTS COMING SOON</h2>
+					<div className='projects-items'>
+						<div className='projects-item'>
+							<img src={sneaksOfNature} />
+						</div>
+						<div className='projects-item'>
+							?
+						</div>
+						<div className='projects-item'>
+							?
+						</div>
+						<div className='projects-item'>
+							?
+						</div>
+						<p>Sneaks of Nature</p>
+					</div>
+				</div>
+			)}
+
+			{width <= 1000 && (
+				<div className='projects-coming-soon'>
 				<h2>PROJECTS COMING SOON</h2>
 				<div className='projects-items'>
 					<div className='projects-item'>
@@ -32,15 +62,18 @@ const Home = () => {
 					<div className='projects-item'>
 						?
 					</div>
-					<div className='projects-item'>
-						?
-					</div>
-					<div className='projects-item'>
-						?
-					</div>
 					<p>Sneaks of Nature</p>
+					<p></p>
+					<div className='projects-item'>
+						?
+					</div>
+					<div className='projects-item'>
+						?
+					</div>
+					<p></p>
 				</div>
 			</div>
+			)}
 			{/*
 
 			<HomeWelcome />
