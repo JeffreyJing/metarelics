@@ -20,6 +20,7 @@
     top: 0px;
     width: 33%;
     margin: 5%;
+    color: white;
 }
 
 .banner-content h2 {
@@ -62,5 +63,13 @@
         width: 100%;
         margin: 0px;
         text-align: center;
+    }
+
+    .banner-content svg {
+        /* margin-top: 30px; */
+        color: black !important;
+        fill: black !important;
+        height: 50px;
+        width: 50px;
     }
 }

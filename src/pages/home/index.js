@@ -1,27 +1,47 @@
 import React from 'react';
 import './index.css';
 import { Banner } from '../../components/banner';
+import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 
 const Home = () => {
 	return (
 		<>
 			<Banner />
 
-			{/* <MintNowButton />
+			{/* <MintNowButton /> */}
 
-			<div className='home-about-container' id='about'>
-				<h2>RELICS PASS</h2>
-			    <h3>FIRST ACCESS TO JEFF COLE'S GENESIS PROJECT</h3>
-				<h3>FIRST ACCESS TO METARELICS PARTNER PROJECTS</h3>
-				<h3>WEEKLY NFT GIVEAWAYS</h3>
-				<h3>50% OFF NFT CANVAS PRINTS FOR LIFE</h3>
-				<h3>EXCLUSIVE PHYSICAL PRODUCTS</h3>
-				<h3>TOKEN ACCESS TO THE RELIC ROOM</h3>
-				<h3>EXCLUSIVE PHYSICAL PRODUCTS</h3>
-				<h3>TOKEN ACCESS TO THE RELIC ROOM</h3>
-				<h3>EXCLUSIVE COMMUNITY EVENTS ON & OFFLINE</h3>  
+			<div className='relics-pass-access' id='about'>
+				<h2>RELICS PASS ACCESS</h2>
+			    <p>FIRST ACCESS TO JEFF COLE'S GENESIS PROJECT</p>
+				<p>FIRST ACCESS TO METARELICS PARTNER PROJECTS</p>
+				<p>WEEKLY NFT GIVEAWAYS</p>
+				<p>50% OFF NFT CANVAS PRINTS FOR LIFE</p>
+				<p>EXCLUSIVE PHYSICAL PRODUCTS</p>
+				<p>TOKEN ACCESS TO THE RELIC ROOM</p>
+				<p>EXCLUSIVE PHYSICAL PRODUCTS</p>
+				<p>TOKEN ACCESS TO THE RELIC ROOM</p>
+				<p>EXCLUSIVE COMMUNITY EVENTS ON &amp; OFFLINE</p>  
 			</div>
 
+			<div className='projects-coming-soon'>
+				<h2>PROJECTS COMING SOON</h2>
+				<div className='projects-items'>
+					<div className='projects-item'>
+						<img src={sneaksOfNature} />
+					</div>
+					<div className='projects-item'>
+						?
+					</div>
+					<div className='projects-item'>
+						?
+					</div>
+					<div className='projects-item'>
+						?
+					</div>
+					<p>Sneaks of Nature</p>
+				</div>
+			</div>
+			{/*
 
 			<HomeWelcome />
 

@@ -14,7 +14,7 @@
 html, body {
 	/* background-color: black; */
 	font-family: 'Interstate Bold', Helvetica, sans-serif;
-	color: var(--main-color);
+	color: black;
 	padding: 0px;
 	margin: 0px;
 	overflow-x: hidden;
