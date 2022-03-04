@@ -4,13 +4,12 @@ import './index.css';
 import { MintNowButton } from '../../components/mint-button';
 import { Team } from '../../components/team';
 import { HomeWelcome } from '../../components/home-welcome';
+import { Banner } from '../../components/banner';
 
 const Home = () => {
 	return (
 		<>
-			<div className='home-banner-container'>
-				<img className='home-banner' src={banner} alt='Home Banner' />
-			</div>
+			<Banner />
 
 			{/* <MintNowButton />
 

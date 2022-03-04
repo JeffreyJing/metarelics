@@ -14,6 +14,8 @@ const Navbar = () => {
         });
     }, []);
 
+	// TODO: Link these to things
+	// TODO: Update styles for these
 	const navigationItems = (
 		<>
 			<a href={'#print-nfts'}>PRINT NFTS</a>
@@ -39,7 +41,8 @@ const Navbar = () => {
 					)}
 				</div>
 				<div className='navbar-emblem'>
-					METARELICS					
+					{/** TODO: Replace this with metarelics logo */}
+					METARELICS
 				</div>
 				<div className='navbar-items'>
 					<a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>
@@ -49,7 +52,7 @@ const Navbar = () => {
 			</div>
 			<AnimateHeight duration={500} height={(width < 1000 && navOpen) ? 'auto': 0}>
 				<div className='navbar-mobile-navigation'>
-						{navigationItems}
+					{navigationItems}
 				</div>
 			</AnimateHeight>
 		</>
