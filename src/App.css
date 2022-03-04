@@ -9,7 +9,7 @@
 }
 
 html, body {
-	background-color: black;
+	/* background-color: black; */
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	color: var(--main-color);
 	padding: 0px;

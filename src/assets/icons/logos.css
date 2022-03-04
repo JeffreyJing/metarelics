@@ -1,8 +1,8 @@
 .navbar-logo {
 	color: black;
 	fill: black;
-	height: 40px;
-	width: 40px;
+	height: 30px;
+	width: 30px;
 
 	transition: fill 250ms ease;
 }
@@ -20,8 +20,8 @@ a:hover, .navbar-logo:hover {
 
 @media screen and (max-width: 540px) {
 	.navbar-logo {
-		height: 35px;
-		width: 35px;
+		height: 20px;
+		width: 20px;
 	}
 
 	.navbar-logo-opensea {

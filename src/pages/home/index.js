@@ -12,7 +12,7 @@ const Home = () => {
 				<img className='home-banner' src={banner} alt='Home Banner' />
 			</div>
 
-			<MintNowButton />
+			{/* <MintNowButton />
 
 			<div className='home-about-container' id='about'>
 				<h2>RELICS PASS</h2>
@@ -36,7 +36,7 @@ const Home = () => {
                 <div className='tail-1'>
                     Terms of Sale | Privacy Policy
                 </div>
-            </div>
+            </div> */}
 		</>
 	);
 }
