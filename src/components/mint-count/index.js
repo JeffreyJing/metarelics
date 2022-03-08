@@ -3,7 +3,7 @@ import './index.css';
 export const MintCount = () => {
     return (
         <div className='mint-count'>
-            0/2323 MINTED
+            0/1000 MINTED
         </div>
     )
 }
