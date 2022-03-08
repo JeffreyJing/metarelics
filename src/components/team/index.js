@@ -6,13 +6,13 @@ import './index.css';
 const TEAM_MEMBERS = [{
     name: 'Jeff Cole',
     description: "Digital artist and Co-Founder of Ikonick. Born in the Michael Jordan era of Chicago, Cole developed an early love for diverse cultural genres emblematic of childhood nostalgia. Cole’s art features masterful mashups of your favorite cultural icons. His consistent output of unique content has attracted attention from the biggest brands in the world, and garnered a cult-like following on Instagram.",
-    twitter: 'https://twitter.com/weshenryart',
-    opensea: 'https://opensea.io/collection/wes-henry-art'
+    twitter: 'https://twitter.com/jeffcoleart',
+    instagram: 'https://www.instagram.com/cole/'
 }, {
     name: 'IKONICK',
     description: "The Metarelics team is powered by Ikonick, The fastest growing art brand in the world. Ikonick was founded by Jeff Cole & Mark Brazil in 2016. They are a west-coast based art brand putting a new spin on the business of inspiring others. Their exclusive collections are in over 150,000 homes around the world. Ikonick is backed by entrepreneurial giant, Gary Vaynerchuk.",
-    twitter: 'https://twitter.com/JonathanLittle',
-    opensea: 'https://opensea.io/'
+    twitter: 'https://twitter.com/TeamIKONICK',
+    opensea: 'https://www.instagram.com/ikonick/'
 }]
 
 export const Team = () => {

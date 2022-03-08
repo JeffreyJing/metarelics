@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AnimateHeight from 'react-animate-height';
 import './index.css';
-import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
+import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL, PRINTS_URL } from '../../constants';
 import { DiscordLogo, Hamburger, InstagramLogo, LooksRareLogo, OpenseaLogo, TwitterLogo } from '../../assets/icons/logos';
 
 const Navbar = () => {
@@ -18,8 +18,8 @@ const Navbar = () => {
 	// TODO: Update styles for these
 	const navigationItems = (
 		<>
-			<a href={'#print-nfts'}>PRINT NFTS</a>
-			<a href={'#relics-pass'}>RELICS PASS</a>
+			<a href={PRINTS_URL} target="_blank" rel="noopener noreferrer">PRINT NFTS</a>
+			<a href={'Https://www.metarelics.xyz'} target="_blank" rel="noopener noreferrer">RELICS PASS</a>
 		</>
 	);
 
@@ -46,7 +46,7 @@ const Navbar = () => {
 				</div>
 				<div className='navbar-items'>
 					<a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>
-					<a href={INSTAGRAM_URL}><InstagramLogo /></a>
+					<a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"><InstagramLogo /></a>
 					<a href={DISCORD_URL} target="_blank" rel="noopener noreferrer"><DiscordLogo /></a>
 				</div>
 			</div>

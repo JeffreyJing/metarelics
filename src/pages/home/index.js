@@ -175,9 +175,9 @@ const Home = () => {
 					<div className='footbar-r-logo'></div>
 				)}
 				<div className='footbar-logos'>
-					<a href={TWITTER_URL} rel='noopener noreferrer'><TwitterLogo /></a>
-					<a href={INSTAGRAM_URL} rel='noopener noreferrer'><InstagramLogo /></a>
-					<a href={DISCORD_URL} rel='noopener noreferrer'><DiscordLogo /></a>
+					<a href={TWITTER_URL} target='blank' rel='noopener noreferrer'><TwitterLogo /></a>
+					<a href={INSTAGRAM_URL} target='blank' rel='noopener noreferrer'><InstagramLogo /></a>
+					<a href={DISCORD_URL} target='blank' rel='noopener noreferrer'><DiscordLogo /></a>
 				</div>
 				<div className='footbar-powered-by'>
 					<p>Powered By Ikonick</p>
