@@ -178,9 +178,9 @@
 }
 
 .build-our-bond img {
-	width: 150%;
-	margin-top: -66%;
-	margin-left: -26%;
+	width: 100%;
+	margin-top: 0%; /*-66%*/
+	margin-left: 0%; /*-26%*/
 	margin-bottom: -5px;
 }
 
