@@ -24,15 +24,7 @@ const Home = () => {
 
 			<div className='relics-pass-access' id='about'>
 				<h2>RELICS PASS ACCESS</h2>
-			    <p>FIRST ACCESS TO JEFF COLE'S GENESIS PROJECT</p>
-				<p>FIRST ACCESS TO METARELICS PARTNER PROJECTS</p>
-				<p>WEEKLY NFT GIVEAWAYS</p>
-				<p>50% OFF NFT CANVAS PRINTS FOR LIFE</p>
-				<p>EXCLUSIVE PHYSICAL PRODUCTS</p>
-				<p>TOKEN ACCESS TO THE RELIC ROOM</p>
-				<p>EXCLUSIVE PHYSICAL PRODUCTS</p>
-				<p>TOKEN ACCESS TO THE RELIC ROOM</p>
-				<p>EXCLUSIVE COMMUNITY EVENTS ON &amp; OFFLINE</p>  
+			    <p>Our team is a dedicated to bringing value in both the digital and physical worlds.</p> 
 			</div>
 
 			{width > 1000 && (
@@ -109,65 +101,10 @@ const Home = () => {
 				)}
 			</div>
 
-			<div className='mission'>
-				<h2>METARELICS MISSION</h2>
-				<div className='mission-items'>
-					<div className='mission-item'>
-						<PreserveOurPast />
-						<p>PRESERVE OUR PAST</p>
-					</div>
-					<div className='mission-item'>
-						<CreateOurCulture />
-						<p>CREATE OUR CULTURE</p>
-					</div>
-					<div className='mission-item'>
-						<ForgeOurFuture />
-						<p>FORGE OUR FUTURE</p>
-					</div>
-				</div>
-			</div>
+
 
 			<div className='build-our-bond'>
 				<img src={buildOurBond} />
-				<div className='build-our-bond-content'>
-					<div className='build-our-bond-intro'>
-						<BuildOurBond />
-						<h2>BUILD OUR BOND</h2>
-						<p>The goal of Metarelics is to continuously increase the strength of our collective. The value of a collection is only as strong as its foundation. Our core values are the bond that holds it all together. No one person is more important than the value of the collective. We empower a space that amplifies every voice throughout our commuity. The people that occupy our community will preserve our culture. In the end, we are what we leave behind.</p>
-					</div>
-					<div className='build-our-bond-items'>
-						<div className='build-our-bond-item'>
-							<ValueFirst />
-							<h2>VALUE FIRST</h2>
-							<p>Give more than you take</p>
-						</div>
-						<div className='build-our-bond-item'>
-							<EveryVoiceMatters />
-							<h2>EVERY VOICE MATTERS</h2>
-							<p>Diversity is the one thing we all have in common</p>
-						</div>
-						<div className='build-our-bond-item'>
-							<DeeperNotWider />
-							<h2>DEEPER NOT WIDER</h2>
-							<p>He who chases two rabbits, catches none</p>
-						</div>
-						<div className='build-our-bond-item'>
-							<BeCurious />
-							<h2>BE CURIOUS</h2>
-							<p>These are the people who change the world</p>
-						</div>
-						<div className='build-our-bond-item'>
-							<PursueYourPotential />
-							<h2>PURSUE YOUR POTENTIAL</h2>
-							<p>Hard work beats talent</p>
-						</div>
-						<div className='build-our-bond-item'>
-							<Execute />
-							<h2>EXECUTE</h2>
-							<p>A good plan is not enough</p>
-						</div>
-					</div>
-				</div>
 			</div>
 
 			<div className='footbar'>
