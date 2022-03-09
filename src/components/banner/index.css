@@ -9,10 +9,10 @@
 
 .banner-video video {
     /** DO NOT CHANGE THESE NUMBERS **/
-    width: 170%;
-    margin-top: -33%;
+    width: 120%;
+    margin-top: -15%;
     margin-left: -10%;
-    margin-bottom: -15%;
+    margin-bottom: -7%;
 }
 
 .banner-content {
@@ -50,10 +50,10 @@
 @media screen and (max-width: 1000px) {
     /** DO NOT CHANGE THESE NUMBERS **/
     .banner-video video {
-        width: 225%;
-        margin-top: -47%;
-        margin-left: -63%;
-        margin-bottom: -18%;
+        width: 140%;
+        margin-top: -28%;
+        margin-left: -19%;
+        margin-bottom: -14%;
     }
 
     .banner-content-wrapper {

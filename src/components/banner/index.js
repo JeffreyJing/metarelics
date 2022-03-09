@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { OpenseaLogo } from '../../assets/icons/logos';
-import bannerVideo from '../../assets/videos/banner.mp4';
+import bannerVideoMobile from '../../assets/videos/banner-mobile.mp4';
+import bannerVideoDesktop from '../../assets/videos/banner-desktop.mp4';
 import { OPENSEA_URL } from '../../constants';
 import ConnectButton from '../connect-button';
 import { MintCount } from '../mint-count';
@@ -29,7 +30,7 @@ export const Banner = () => {
 		<div className='banner-container'>
 			<div className='banner-video'>
 				<video autoPlay loop muted>
-					<source src={bannerVideo} type='video/mp4' />
+					<source src={width < 1000 ? bannerVideoMobile : bannerVideoDesktop} type='video/mp4' />
 				</video>
 			</div>
 			{width > 1000 && bannerContent}
