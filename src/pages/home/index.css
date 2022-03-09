@@ -288,6 +288,14 @@
 		grid-template-rows: 2fr 1fr 2fr 1fr;
 	}
 
+	.projects-item {
+		height: 93%;
+	}
+
+	.projects-items p {
+		margin-top: 0px;
+	}
+
 	.team {
 		display: grid;
 		grid-template-columns: 1fr;
