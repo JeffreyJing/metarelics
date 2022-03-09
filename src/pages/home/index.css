@@ -32,6 +32,19 @@
 	color: gray;
 }
 
+.relics-pass-access-side {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.relics-pass-access-side h2 {
+	font-size: 40px;
+}
+
+.relics-pass-access-side p {
+	font-size: 25px;
+}
+
 .projects-coming-soon {
 	margin-top: 70px;
 	margin-bottom: 70px;
@@ -254,9 +267,9 @@
 	}
 
 	.build-our-bond img {
-		width: 500%;
+		width: 200%;
 		margin-top: 0%;
-		margin-left: -150%;
+		margin-left: -50%;
 	}
 
 	.build-our-bond-items {
@@ -329,6 +342,11 @@
 	
 	.mission p {
 		margin-top: 0px;
+	}
+
+	.relics-pass-access-side {
+		display: grid;
+		grid-template-columns: 1fr;
 	}
 }
 

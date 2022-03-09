@@ -24,7 +24,23 @@ const Home = () => {
 
 			<div className='relics-pass-access' id='about'>
 				<h2>RELICS PASS ACCESS</h2>
-			    <p>Our team is a dedicated to bringing value in both the digital and physical worlds.</p> 
+			    <p>Our team is a dedicated to bringing value in both the digital and physical worlds.</p>
+				<div className='relics-pass-access-side'>
+					<div>
+						<h2>Digital</h2>
+						<p>First access to Jeff Cole's genesis project</p>
+						<p>Free Relic Punk of your choosing</p>
+						<p>First access to Metarelics partner projects</p>
+						<p>Access to the Relic Room Discord</p>
+					</div>
+					<div>
+						<h2>Physical</h2>
+						<p>Exclusive physical products</p>
+						<p>50% off NFT canvas prints for life</p>
+						<p>Weekly AMA with Metarelics team</p>
+						<p>Exclusive community events</p>
+					</div>
+				</div>
 			</div>
 
 			{width > 1000 && (
@@ -74,7 +90,7 @@ const Home = () => {
 				<div className='team-items'>
 					<h2>THE TEAM</h2>
 					<div className='team-item'>
-						<h3>JEFF COLE</h3>
+						<h3>Jeff Cole</h3>
 						<p>
 							Digital artist and Co-Founder of Ikonick. Jeff Cole's art focuses mostly on pop culture and nostalgia. His art features masterful mashups of your favorite cultural icons. His consistent output of unique content has attracted attention from the biggest brands in the world, and garnered a cult-like following on Instagram.
 						</p>
@@ -85,7 +101,7 @@ const Home = () => {
 					</div>
 
 					<div className='team-item'>
-						<h3>IKONICK</h3>
+						<h3>Ikonick</h3>
 						<p>
 							The Metarelics team is powered by Ikonick, founded by Jeff Cole &amp; Mark Brazil in 2016. They are a west-coast based art brand focused on inspiring others. Their exclusive collections are in over 150,000 homes around the world. Ikonick is backed by entrepreneurial giant, Gary Vaynerchuk.
 						</p>

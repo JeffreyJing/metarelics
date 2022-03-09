@@ -29,9 +29,10 @@
 
 .banner-content p {
     font-family: 'Interstate Light';
-    font-size: 25px;
-    margin-bottom: 25%;
+    font-size: 18px;
+    margin-bottom: 50px;
     text-align: left;
+    width: 75%;
 }
 
 .banner-content button {
@@ -57,6 +58,10 @@
 
     .banner-content-wrapper {
         margin: 10%;
+    }
+
+    .banner-content p {
+        width: 100%;
     }
 
     .banner-content {

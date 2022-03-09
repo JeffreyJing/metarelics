@@ -18,7 +18,7 @@ export const Banner = () => {
 	const bannerContent = (
 		<div className='banner-content'>
 			<h2>RELICS PASS</h2>
-			<p>Metarelics is an artist collective led by Jeff Cole & powered by the Ikonick team. The Relic Pass is your access to the Metarelics ecosystem of exclusive products and experiences.</p>
+			<p>Metarelics is an artist collective led by Jeff Cole &amp; powered by the Ikonick team. The Relic Pass is your access to the Metarelics ecosystem of exclusive products and experiences.</p>
 			<MintCount />
 			<ConnectButton />
 			<a href={OPENSEA_URL}><OpenseaLogo /></a>
