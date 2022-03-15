@@ -6,6 +6,7 @@ import { OPENSEA_URL } from '../../constants';
 import ConnectButton from '../connect-button';
 import { MintCount } from '../mint-count';
 import './index.css';
+import { MintNowButton } from '../mint-button';
 
 export const Banner = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -21,7 +22,8 @@ export const Banner = () => {
 			<h2>RELICS PASS</h2>
 			<p>Metarelics is an artist collective led by Jeff Cole &amp; powered by the Ikonick team. The Relic Pass is your access to the Metarelics ecosystem of exclusive products and experiences.</p>
 			<MintCount />
-			<ConnectButton />
+			{/* <ConnectButton /> */}
+			<MintNowButton />
 			<a href={OPENSEA_URL}><OpenseaLogo /></a>
 		</div>
 	)

@@ -32,3 +32,8 @@ export function generateMerkleProof(address) {
 	const proof = merkleTree.getHexProof(hashToken(address));
 	return proof;
 }
+
+export function isUserWhitelisted(address) {
+	const addressInTokens = TOKEN_HOLDERS.find((tokenAddress) => tokenAddress === address);
+	return !!addressInTokens;
+}

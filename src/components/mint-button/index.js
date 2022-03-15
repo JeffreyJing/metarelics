@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { CONTRACT_ADDRESS, MAX_MINT, REGULAR_LIMIT, REGULAR_MINT_TIME, REGULAR_PRICE, WHITELIST_LIMIT, WHITELIST_MINT_TIME, WHITELIST_PRICE } from '../../constants';
 import { Web3Context } from '../../context/web3-context';
-import { generateMerkleProof } from '../../utils/merkle';
+import { generateMerkleProof, isUserWhitelisted } from '../../utils/merkle';
 import nftAbi from '../../assets/abis/nft-abi.json';
 import './index.css';
 
@@ -20,6 +20,7 @@ export const MintNowButton = () => {
 	const [totalMintedCount, setTotalMintedCount] = useState(undefined);
 	const [userTotalMintedCount, setUserTotalMintedCount] = useState(undefined);
 	const [userMintSize, setUserMintSize] = useState(undefined);
+	const [isUserInWhitelist, setIsUserInWhitelist] = useState(false);
 
 	/**
 	 * This hook is in control of setting the total mint counter and user mint counter.
@@ -41,10 +42,10 @@ export const MintNowButton = () => {
 					const isMainSale = await nftContract.methods.isMainSale().call();
 					const isPaused = await nftContract.methods.paused().call();
 
-					const isBeforeMintTime = Date.now() < MINT_TIME;
+					// const isBeforeMintTime = Date.now() < MINT_TIME;
 
 					setMintState(
-						isPaused || isBeforeMintTime
+						isPaused
 							? MINT_STATE.DISABLED
 							: isMainSale
 								? MINT_STATE.REGULAR
@@ -67,6 +68,10 @@ export const MintNowButton = () => {
 			}
 		}
 	}, [connected, mintState]);
+
+	useEffect(() => {
+		setIsUserInWhitelist(isUserWhitelisted(address));
+	}, [address]);
 
 	function createContract() {
 		return new web3.eth.Contract(
@@ -122,14 +127,14 @@ export const MintNowButton = () => {
 			const tx = {
 				from: address,
 				to: CONTRACT_ADDRESS,
-				value: web3.utils.toWei((countToMint * priceToUse).toString(), "ether"),
+				value: web3.utils.toWei((/*countToMint * */ priceToUse).toString(), "ether"),
 				data: mintState === MINT_STATE.WHITELIST
 					? nftContract.methods.presaleMint(
-						web3.utils.toHex(countToMint),
+						web3.utils.toHex(/*countToMint*/ 1),
 						merkleProof
 					).encodeABI()
 					: nftContract.methods.mint(
-						web3.utils.toHex(countToMint)
+						web3.utils.toHex(/*countToMint*/ 1)
 					).encodeABI()
 				,
 				// gas: `${88000 + (3500 * countToMint)}`,
@@ -152,17 +157,17 @@ export const MintNowButton = () => {
 	let userMintSupplyMessage;
 	switch(mintState) {
 		case MINT_STATE.WHITELIST: {
-			mintText = 'Whitelist Mint';
+			mintText = 'MINT RELICS PASS';
 			userMintSupplyMessage = `You may mint a total of ${WHITELIST_LIMIT} during the whitelist phase.`
 			break;
 		}
 		case MINT_STATE.REGULAR: {
-			mintText = 'Mint now!';
+			mintText = 'MINT RELICS PASS';
 			userMintSupplyMessage = `You may mint a total of ${REGULAR_LIMIT}!`
 			break;
 		}
 		default: {
-			mintText = 'WHITELIST MINT';
+			mintText = 'MINT RELICS PASS';
 			userMintSupplyMessage = 'You cannot mint at this time.';
 			break;
 		}
@@ -174,63 +179,36 @@ export const MintNowButton = () => {
 
 	return (
 		<div className='mint-overall-container' id='mint'>
-			<h2 className='mint-title'>
-				{totalMintedCount ?? 0} / {MAX_MINT}
-			</h2>
-			{
-				mintState !== MINT_STATE.DISABLED && (
-					<div className='mint-price'>
-						{mintState === MINT_STATE.WHITELIST ? `${WHITELIST_PRICE} ETH` : `${REGULAR_PRICE} ETH`}
-					</div>
-				)
-			}
 			{error && (
 				<div className={`mint-msg mint-error`}>
 					Error: {error}
 				</div>
 			)}
-			{
-				connected && (
-					<div className='mint-msg'>
-						Total supply minted: <span className='mint-accent'>{totalMintedCount ?? 0}/{MAX_MINT}</span>
-					</div>
-				)
-			}
 			
 			{mintSuccess && (
 				<div className='mint-msg mint-success'>Successfully minted {mintSuccess.size} NFTs! Transaction info: <a href={`https://etherscan.io/tx/${mintSuccess.transactionHash}`} target="_blank" rel="noopener noreferrer">{mintSuccess.transactionHash.substring(0, 9)}...</a></div>
 			)}
-			{
-				connected && mintState !== MINT_STATE.DISABLED && (
-					<div className='mint-counter'>
-						<div className='mint-amount-number'>
-							Amount to mint: <span className='mint-accent'>{userMintSize ?? 0}</span>&nbsp;
-						</div>
-						<button className='mint-counter-button' onClick={() => {
-							// if (
-							// 	(mintState === MINT_STATE.WHITELIST
-							// 		&& (userTotalMintedCount + (userMintSize ?? 0)) < WHITELIST_LIMIT)
-							// 	|| (mintState === MINT_STATE.REGULAR
-							// 		&& (userTotalMintedCount + (userMintSize ?? 0)) < REGULAR_LIMIT)
-							// ) {
-								if (!userMintSize || userMintSize < 10) {
-									setUserMintSize((userMintSize ?? 0) + 1);
-								}
-							// }
-						}}>+</button>
-						<button className='mint-counter-button' onClick={() => {
-							if (userMintSize > 0) {
-								setUserMintSize(userMintSize - 1);
-							}
-						}}>–</button>
-					</div>
-				)
-			}
+
+			{connected && (
+				<div className={'mint-button-connected'}>
+					<p>Connected.</p>
+					{
+						isUserInWhitelist
+						? (
+							<p>Congrats! You're on the Relic List.</p>
+						) : (
+							<p>Sorry, you're not on the Relic List.</p>
+						)
+					}
+				</div>
+			)}
+			
 			<button 
 				className={`
 					mint-button-container
 					${connected && mintState === MINT_STATE.DISABLED ? 'mint-disabled' : ''}
 					${purchasing ? 'mint-disabled' : ''}
+					${!isUserInWhitelist ? 'mint-disabled' : ''}
 				`} 
 				onClick={
 					connected
@@ -244,9 +222,9 @@ export const MintNowButton = () => {
 						: "Connect Wallet"
 				} 
 			</button>
-			<div className='mint-disconnect'>
+			{/* <div className='mint-disconnect'>
 				{connected && <a href='#' onClick={disconnect}>Disconnect wallet</a>}
-			</div>
+			</div> */}
 		</div>
 	);
 }
