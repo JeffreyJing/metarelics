@@ -35,8 +35,6 @@ button {
 	cursor: pointer;
 	font-family: 'Interstate Bold', Helvetica, sans-serif;
 	width: 70%;
-	font-size: 20px;
-
 	transition: box-shadow 250ms ease;
 }
 
