@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { OpenseaLogo } from '../../assets/icons/logos';
+import { OpenseaLogo, OpenseaLogoDark } from '../../assets/icons/logos';
 import bannerVideoMobile from '../../assets/videos/banner-mobile.mp4';
 import bannerVideoDesktop from '../../assets/videos/banner-desktop.mp4';
 import { OPENSEA_URL } from '../../constants';
@@ -24,7 +24,12 @@ export const Banner = () => {
 			<MintCount />
 			{/* <ConnectButton /> */}
 			<MintNowButton />
-			<a href={OPENSEA_URL}><OpenseaLogo /></a>
+			<a href={OPENSEA_URL}>
+				<button className='banner-opensea' role="link">
+					<OpenseaLogoDark />BUY ON OPENSEA
+				</button>
+			</a>
+			{/* <a href={OPENSEA_URL}><OpenseaLogo /></a> */}
 		</div>
 	)
 	
