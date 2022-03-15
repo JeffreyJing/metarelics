@@ -26,32 +26,37 @@ export const MintNowButton = () => {
 	 * 
 	 * It runs a function every second to get the updated state from the contract.
 	 */
-	useEffect(() => {
-		document.body.style.backgroundColor = 'rgb(' + 165 + ',' + 163 + ',' + 163 + ')';
+	 useEffect(() => {
 		let messageShowed = false;
 		let mintCounterInterval = setInterval(async () => {
-			if (connected && mintState !== MINT_STATE.DISABLED) {
-				/**
-				 * This is a failsafe for the users to get the final address + merkle root.
-				 * 
-				 * This will have a popup message appear if the cache is outdated. We want this to happen.
-				 */
-				if (CONTRACT_ADDRESS === '') {
-					if (!messageShowed) {
-						alert("Please empty your cache and hard reload the page in order to mint. (Right click on reload button in Google Chrome to get this option)");
-						messageShowed = true;
-					}
-					return;
-				}
+			if (connected) {
 				try {
 					const nftContract = createContract();
 					const totalSupply = await nftContract.methods.totalSupply().call();
-					setTotalMintedCount(Number(totalSupply));
+					setTotalMintedCount(Number(totalSupply) - 1);	// -1 for +1 indexing
 					const userBalance = await nftContract.methods.balanceOf(address).call();
 					setUserTotalMintedCount(Number(userBalance));
+
+					const isPresale = await nftContract.methods.isPresale().call();
+					const isMainSale = await nftContract.methods.isMainSale().call();
+					const isPaused = await nftContract.methods.paused().call();
+
+					const isBeforeMintTime = Date.now() < MINT_TIME;
+
+					setMintState(
+						isPaused || isBeforeMintTime
+							? MINT_STATE.DISABLED
+							: isMainSale
+								? MINT_STATE.REGULAR
+								: isPresale	
+									? MINT_STATE.WHITELIST
+									: MINT_STATE.DISABLED
+					);
 				} catch(e) {
 					// Ideally should never get here so long as MM is connected.
-					setError("There was an error with contacting the contract...");
+					// setError("There was an error with contacting the contract...");
+
+					// console.log("ERROR", e)
 				}
 			}
 		}, 1000);
@@ -62,30 +67,6 @@ export const MintNowButton = () => {
 			}
 		}
 	}, [connected, mintState]);
-
-	/**
-	 * Check the mint times and sets the appropriate mint state
-	 * 
-	 * Checks every 500ms.
-	 */
-	useEffect(() => {
-		const interval = setInterval(() => {
-			if (Date.now() >= REGULAR_MINT_TIME && mintState !== MINT_STATE.REGULAR) {
-				setMintState(MINT_STATE.REGULAR);
-				clearInterval(interval);
-				return;
-			}
-
-			if (Date.now() >= WHITELIST_MINT_TIME && mintState !== MINT_STATE.WHITELIST) {
-				setMintState(MINT_STATE.WHITELIST);
-				return;
-			}
-		}, 500);
-
-		return () => {
-			clearInterval(interval);
-		}
-	}, []);
 
 	function createContract() {
 		return new web3.eth.Contract(
@@ -142,14 +123,17 @@ export const MintNowButton = () => {
 				from: address,
 				to: CONTRACT_ADDRESS,
 				value: web3.utils.toWei((countToMint * priceToUse).toString(), "ether"),
-				data: nftContract.methods.mint(
-					web3.utils.toHex(countToMint),
-					merkleProof
-				).encodeABI(),
-				gas: `${200000 * countToMint}`,
-				maxFeePerGas: `${Math.floor(gasPrice*1.05)}`
+				data: mintState === MINT_STATE.WHITELIST
+					? nftContract.methods.presaleMint(
+						web3.utils.toHex(countToMint),
+						merkleProof
+					).encodeABI()
+					: nftContract.methods.mint(
+						web3.utils.toHex(countToMint)
+					).encodeABI()
+				,
+				// gas: `${88000 + (3500 * countToMint)}`,
 			};
-			console.log(tx);
 			const receipt = await web3.eth.sendTransaction(tx);
 			setPurchasing(false);
 			setError(undefined);
