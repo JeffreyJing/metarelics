@@ -22,7 +22,7 @@ const Home = () => {
 
 			{/* <MintNowButton /> */}
 
-			<div className='relics-pass-access' id='about'>
+			{/* <div className='relics-pass-access' id='about'>
 				<h2>RELICS PASS ACCESS</h2>
 			    <p>Our team is a dedicated to bringing value in both the digital and physical worlds.</p>
 				<div className='relics-pass-access-side'>
@@ -41,7 +41,28 @@ const Home = () => {
 						<p>Exclusive community events</p>
 					</div>
 				</div>
+			</div> */}
+			<div className='team'>
+				{width >= 1000 && (
+					<div className='first-holder-picture'>
+					</div>
+				)}
+				<div className='first-holder-items'>
+					<h2>FIRST HOLDER BENEFIT</h2>
+					<div>
+						<p>Mint your choice of Relic Punk</p>
+						<p>Created By Jeff Cole</p>
+					</div>
+					<div>
+						<p>The "Relic Punks" are a 33 piece tribute to important cultural technology of the past. The collection uses nostalgia to bring back the emotional relationship and connections we had growing up with consumer devices.</p>
+					</div>
+				</div>
+				{width < 1000 && (
+					<div className='first-holder-picture'>
+					</div>
+				)}
 			</div>
+
 
 			{width > 1000 && (
 				<div className='projects-coming-soon'>
