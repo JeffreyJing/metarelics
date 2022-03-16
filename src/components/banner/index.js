@@ -35,10 +35,14 @@ export const Banner = () => {
 	
 	return (
 		<div className='banner-container'>
-			<div className='banner-video'>
-				<video autoPlay loop muted>
-					<source src={width < 1000 ? bannerVideoMobile : bannerVideoDesktop} type='video/mp4' />
-				</video>
+			<div className='banner-video' dangerouslySetInnerHTML={{
+				__html: `
+					<video autoplay loop muted playsinline>
+						<source src="${width < 1000 ? bannerVideoMobile : bannerVideoDesktop}" type='video/mp4' />
+					</video>
+				`
+			}}>
+				
 			</div>
 			{width > 1000 && bannerContent}
 			{width <= 1000 && (
