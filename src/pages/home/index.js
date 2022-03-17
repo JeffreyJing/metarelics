@@ -42,7 +42,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div> */}
-			<div className='team'>
+			<div className='first-holder'>
 				{width >= 1000 && (
 					<div className='first-holder-picture'>
 					</div>

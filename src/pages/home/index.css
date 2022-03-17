@@ -127,16 +127,22 @@
 .first-holder-items {
 	background-color: black;
 	padding: 10%;
+	padding-top: 15%;
 	color: white;
+}
+
+.first-holder-items h2 {
+	font-size: 40px;
 }
 
 .first-holder-items p {
 	margin: 0px;
 	font-family: 'Interstate Light';
+	font-size: 20px;
 }
 
 .first-holder-items div {
-	margin-top: 100px;
+	margin-top: 120px;
 	width: 75%;
 }
 
@@ -174,10 +180,16 @@
 	background-position: center;
 }
 
+.first-holder {
+	display: grid;
+	grid-template-columns: 5fr 7fr;
+}
+
 .first-holder-picture {
 	background-image: url(../../assets/images/relicpunks.jpg);
 	background-size: cover;
 	background-position: center;
+	height: 50vw;
 }
 
 .mission {
@@ -344,6 +356,15 @@
 	.team {
 		display: grid;
 		grid-template-columns: 1fr;
+	}
+
+	.first-holder {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.first-holder-picture {
+		height: 465px;
 	}
 	
 	.team-items {
