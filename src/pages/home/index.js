@@ -5,7 +5,7 @@ import sneaksOfNature from '../../assets/images/sneaksofnature.png';
 import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
 import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
 import teamImg from '../../assets/images/team.png';
-import buildOurBond from '../../assets/images/bob.jpg';
+import buildOurBond from '../../assets/images/bottom-banner.jpg';
 import { NavLink } from 'react-router-dom';
 
 const Home = () => {
