@@ -21,6 +21,8 @@ export const MintNowButton = () => {
 	const [userTotalMintedCount, setUserTotalMintedCount] = useState(undefined);
 	const [userMintSize, setUserMintSize] = useState(undefined);
 	const [isUserInWhitelist, setIsUserInWhitelist] = useState(false);
+	const [isSecondSale, setIsSecondSale] = useState(false);
+	const [isBackupSale, setIsBackupSale] = useState(false);
 
 	/**
 	 * This hook is in control of setting the total mint counter and user mint counter.
@@ -30,6 +32,7 @@ export const MintNowButton = () => {
 	 useEffect(() => {
 		let messageShowed = false;
 		let mintCounterInterval = setInterval(async () => {
+			console.log("CONNECTED", connected);
 			if (connected) {
 				try {
 					const nftContract = createContract();
@@ -38,8 +41,12 @@ export const MintNowButton = () => {
 					const userBalance = await nftContract.methods.balanceOf(address).call();
 					setUserTotalMintedCount(Number(userBalance));
 
-					const isPresale = await nftContract.methods.isPresale().call();
-					const isMainSale = await nftContract.methods.isMainSale().call();
+					const _isSecondarySale = await nftContract.methods.isSecondSale().call();
+					const _isBackupSale = await nftContract.methods.isBackupSale().call();
+
+					setIsBackupSale(_isBackupSale);
+					setIsSecondSale(_isSecondarySale);
+
 					const isPaused = await nftContract.methods.paused().call();
 
 					// const isBeforeMintTime = Date.now() < MINT_TIME;
@@ -47,17 +54,13 @@ export const MintNowButton = () => {
 					setMintState(
 						isPaused
 							? MINT_STATE.DISABLED
-							: isMainSale
-								? MINT_STATE.REGULAR
-								: isPresale	
-									? MINT_STATE.WHITELIST
-									: MINT_STATE.DISABLED
+							: MINT_STATE.WHITELIST
 					);
 				} catch(e) {
 					// Ideally should never get here so long as MM is connected.
 					// setError("There was an error with contacting the contract...");
 
-					// console.log("ERROR", e)
+					console.log("ERROR", e)
 				}
 			}
 		}, 1000);
@@ -92,13 +95,8 @@ export const MintNowButton = () => {
 			return;
 		}
 
-		if (!userMintSize) {
-			setError("You must set your amount to mint!");
-			return;
-		}
 		setPurchasing(true);
 		setMintSuccess(undefined);
-		const countToMint = userMintSize ?? 0;
 		const nftContract = createContract();
 		let merkleProof = [];
 
@@ -123,20 +121,14 @@ export const MintNowButton = () => {
 		// merkleProof).estimateGas();
 		// console.log(est);
 		const gasPrice = await web3.eth.getGasPrice();
+
+		console.log("MERKLE", merkleProof);
 		try {
 			const tx = {
 				from: address,
 				to: CONTRACT_ADDRESS,
 				value: web3.utils.toWei((/*countToMint * */ priceToUse).toString(), "ether"),
-				data: mintState === MINT_STATE.WHITELIST
-					? nftContract.methods.presaleMint(
-						web3.utils.toHex(/*countToMint*/ 1),
-						merkleProof
-					).encodeABI()
-					: nftContract.methods.mint(
-						web3.utils.toHex(/*countToMint*/ 1)
-					).encodeABI()
-				,
+				data: getDataFunction(),
 				// gas: `${88000 + (3500 * countToMint)}`,
 			};
 			const receipt = await web3.eth.sendTransaction(tx);
@@ -151,7 +143,25 @@ export const MintNowButton = () => {
 			setError("There was an error when minting. " + e.message);
 			setPurchasing(false);
 		}
+
+		function getDataFunction() {
+			if (isBackupSale) {
+				return nftContract.methods.mint().encodeABI();
+			}
+
+			if (isSecondSale) {
+				return nftContract.methods.secondaryMint().encodeABI();
+			}
+
+			if (mintState === MINT_STATE.WHITELIST) {
+				return nftContract.methods.presaleMint(
+					web3.utils.toHex(1),
+					merkleProof
+				).encodeABI();
+			}
+		}
 	}
+
 
 	let mintText;
 	let userMintSupplyMessage;
