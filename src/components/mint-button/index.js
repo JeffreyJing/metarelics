@@ -195,9 +195,9 @@ export const MintNowButton = () => {
 					{
 						isUserInWhitelist
 						? (
-							<p>Congrats! You're on the Relic List.</p>
+							<p>Congrats! You're on the Relics List.</p>
 						) : (
-							<p>Sorry, you're not on the Relic List.</p>
+							<p>Sorry, you're not on the Relics List.</p>
 						)
 					}
 				</div>
