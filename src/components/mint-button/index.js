@@ -201,7 +201,7 @@ export const MintNowButton = () => {
 
 			{connected && (
 				<div className={'mint-button-connected'}>
-					<p>Connected.</p>
+					<a href='#' onClick={disconnect}>Connected.</a>
 					{
 						isUserInWhitelist
 						? (
