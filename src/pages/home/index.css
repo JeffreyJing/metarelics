@@ -292,6 +292,10 @@
 	width: 60px;
 }
 
+.terms-of-use {
+	margin-top: 50px;
+}
+
 @media screen and (max-width: 1000px) {
 	.first-holder-picture {
 		background-image: url(../../assets/images/relicpunks.jpg);

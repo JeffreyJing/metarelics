@@ -6,6 +6,7 @@ import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
 import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo, EveryVoiceMatters, Execute, ForgeOurFuture, InstagramLogo, PreserveOurPast, PursueYourPotential, TwitterLogo, ValueFirst } from '../../assets/icons/logos';
 import teamImg from '../../assets/images/team.png';
 import buildOurBond from '../../assets/images/bob.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -156,6 +157,9 @@ const Home = () => {
 				<div className='footbar-powered-by'>
 					<p>Powered By Ikonick</p>
 					<p>&copy; Copyright 2022 - Metarelics</p>
+					<div className='terms-of-use'>
+						<NavLink to='/terms-of-use'>Terms of use</NavLink>
+					</div>
 				</div>
 				{width < 1000 && (
 					<div className='footbar-r-logo'></div>
