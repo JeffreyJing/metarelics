@@ -7,6 +7,7 @@ import { BeCurious, BuildOurBond, CreateOurCulture, DeeperNotWider, DiscordLogo,
 import teamImg from '../../assets/images/team.png';
 import buildOurBond from '../../assets/images/bottom-banner.jpg';
 import { NavLink } from 'react-router-dom';
+import relicPunks from '../../assets/images/relicpunks.jpg';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -46,6 +47,7 @@ const Home = () => {
 			<div className='first-holder'>
 				{width >= 1000 && (
 					<div className='first-holder-picture'>
+						<img src={relicPunks} />
 					</div>
 				)}
 				<div className='first-holder-items'>
@@ -60,6 +62,7 @@ const Home = () => {
 				</div>
 				{width < 1000 && (
 					<div className='first-holder-picture'>
+						<img src={relicPunks} />
 					</div>
 				)}
 			</div>
