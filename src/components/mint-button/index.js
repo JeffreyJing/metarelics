@@ -189,11 +189,11 @@ export const MintNowButton = () => {
 
 	return (
 		<div className='mint-overall-container' id='mint'>
-			{error && (
+			{/* {error && (
 				<div className={`mint-msg mint-error`}>
 					Error: {error}
 				</div>
-			)}
+			)} */}
 			
 			{mintSuccess && (
 				<div className='mint-msg mint-success'>Successfully minted {mintSuccess.size} NFTs! Transaction info: <a href={`https://etherscan.io/tx/${mintSuccess.transactionHash}`} target="_blank" rel="noopener noreferrer">{mintSuccess.transactionHash.substring(0, 9)}...</a></div>

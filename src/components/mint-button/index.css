@@ -25,6 +25,10 @@
     color: var(--accent-color);
 }
 
+.mint-button-container {
+    padding: 12px;
+}
+
 /* .mint-button-container {
     margin-top: 20px;
     padding: 20px;
