@@ -101,7 +101,7 @@ export const MintNowButton = () => {
 		let merkleProof = [];
 
 		// COMMENT THIS OUT IF MERKLE PROOF IS FAILING
-		if (mintState === MINT_STATE.WHITELIST) {
+		if (!(isBackupSale || isSecondSale)) {
 			try {
 				merkleProof = generateMerkleProof(address);
 			} catch(e) {
@@ -218,7 +218,7 @@ export const MintNowButton = () => {
 					mint-button-container
 					${connected && mintState === MINT_STATE.DISABLED ? 'mint-disabled' : ''}
 					${purchasing ? 'mint-disabled' : ''}
-					${!isUserInWhitelist ? 'mint-disabled' : ''}
+					${!(isSecondSale || isBackupSale) && !isUserInWhitelist ? 'mint-disabled' : ''}
 				`} 
 				onClick={
 					connected
