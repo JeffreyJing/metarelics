@@ -120,8 +120,8 @@ const Home = () => {
 							Digital artist and Co-Founder of Ikonick. Jeff Cole's art focuses mostly on pop culture and nostalgia. His art features masterful mashups of your favorite cultural icons. His consistent output of unique content has attracted attention from the biggest brands in the world, and garnered a cult-like following on Instagram.
 						</p>
 						<div className='team-item-icons'>
-							<a href={TWITTER_URL}><TwitterLogo /></a>
-							<a href={INSTAGRAM_URL}><InstagramLogo /></a>
+							<a href={'https://twitter.com/jeffcoleart'} target='_blank' rel="noopener noreferrer"><TwitterLogo /></a>
+							<a href={'https://www.instagram.com/cole/'} target='_blank' rel="noopener noreferrer"><InstagramLogo /></a>
 						</div>
 					</div>
 
@@ -131,8 +131,8 @@ const Home = () => {
 							The Metarelics team is powered by Ikonick, founded by Jeff Cole &amp; Mark Brazil in 2016. They are a west-coast based art brand focused on inspiring others. Their exclusive collections are in over 150,000 homes around the world. Ikonick is backed by entrepreneurial giant, Gary Vaynerchuk.
 						</p>
 						<div className='team-item-icons'>
-							<a href={TWITTER_URL}><TwitterLogo /></a>
-							<a href={INSTAGRAM_URL}><InstagramLogo /></a>
+							<a href={TWITTER_URL} target='_blank' rel='noopener noreferrer'><TwitterLogo /></a>
+							<a href={INSTAGRAM_URL} target='_blank' rel='noopener noreferrer'><InstagramLogo /></a>
 						</div>
 					</div>
 				</div>
