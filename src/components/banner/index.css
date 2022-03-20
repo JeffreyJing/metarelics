@@ -97,10 +97,10 @@
 
     /** DO NOT CHANGE THESE NUMBERS **/
     .banner-video video {
-        width: 140%;
-        margin-top: -28%;
-        margin-left: -19%;
-        margin-bottom: -14%;
+        width: 320%;
+        margin-top: -70%;
+        margin-left: -110%;
+        margin-bottom: -32%;
     }
 
     .banner-content-wrapper {
