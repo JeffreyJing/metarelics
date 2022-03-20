@@ -3,7 +3,7 @@ import './index.css';
 
 const TermsOfUse = () => {
     return (
-        <div className='terms-of-use'>
+        <div className='terms-of-use-container'>
             <h1 className="terms-title">Terms of Use</h1>
             <h1 className="terms-title">Last Updated: March 16 2022</h1>
             

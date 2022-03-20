@@ -313,6 +313,7 @@
 
 .terms-of-use {
 	margin-top: 50px;
+	padding-right: 0px;
 }
 
 @media screen and (max-width: 1000px) {
