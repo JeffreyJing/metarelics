@@ -29,6 +29,7 @@ export function generateMerkleProof(address) {
 	}
 
 	const merkleTree = generateMerkleTree();
+	// console.log(merkleTree.getHexRoot());
 	const proof = merkleTree.getHexProof(hashToken(address));
 	return proof;
 }

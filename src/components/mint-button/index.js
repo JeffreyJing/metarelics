@@ -31,6 +31,7 @@ export const MintNowButton = () => {
 	 */
 	 useEffect(() => {
 		let messageShowed = false;
+		// console.log(generateMerkleProof(address));
 		let mintCounterInterval = setInterval(async () => {
 			console.log("CONNECTED", connected);
 			if (connected) {
