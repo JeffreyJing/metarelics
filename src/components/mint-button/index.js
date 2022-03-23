@@ -220,7 +220,7 @@ export const MintNowButton = () => {
 					mint-button-container
 					${connected && mintState === MINT_STATE.DISABLED ? 'mint-disabled' : ''}
 					${purchasing ? 'mint-disabled' : ''}
-					${!(isSecondSale || isBackupSale) && !isUserInWhitelist ? 'mint-disabled' : ''}
+					${connected && !(isSecondSale || isBackupSale) && !isUserInWhitelist ? 'mint-disabled' : ''}
 				`} 
 				onClick={
 					connected
