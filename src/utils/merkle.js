@@ -35,6 +35,11 @@ export function generateMerkleProof(address) {
 }
 
 export function isUserWhitelisted(address) {
-	const addressInTokens = TOKEN_HOLDERS.find((tokenAddress) => tokenAddress === address);
+	const addressInTokens = TOKEN_HOLDERS.find((tokenAddress) => {
+		if (tokenAddress !== undefined && address !== undefined) {
+			return tokenAddress.toLowerCase() === address.toLowerCase()
+		}
+		return false;
+	});
 	return !!addressInTokens;
 }
