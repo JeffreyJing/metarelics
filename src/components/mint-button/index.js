@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
-import { CONTRACT_ADDRESS, MAX_MINT, REGULAR_LIMIT, REGULAR_MINT_TIME, REGULAR_PRICE, WHITELIST_LIMIT, WHITELIST_MINT_TIME, WHITELIST_PRICE } from '../../constants';
+import { CONTRACT_ADDRESS, MAX_MINT, MINT_TIME, REGULAR_LIMIT, REGULAR_MINT_TIME, REGULAR_PRICE, WHITELIST_LIMIT, WHITELIST_MINT_TIME, WHITELIST_PRICE } from '../../constants';
 import { Web3Context } from '../../context/web3-context';
 import { generateMerkleProof, isUserWhitelisted } from '../../utils/merkle';
 import nftAbi from '../../assets/abis/nft-abi.json';
@@ -50,10 +50,10 @@ export const MintNowButton = () => {
 
 					const isPaused = await nftContract.methods.paused().call();
 
-					// const isBeforeMintTime = Date.now() < MINT_TIME;
+					const isBeforeMintTime = Date.now() < MINT_TIME;
 
 					setMintState(
-						isPaused
+						isPaused || isBeforeMintTime
 							? MINT_STATE.DISABLED
 							: MINT_STATE.WHITELIST
 					);
