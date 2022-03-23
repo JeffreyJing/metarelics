@@ -27,7 +27,7 @@ const Navbar = () => {
 		<>
 			<div className='navbar-container'>
 				<div className='navbar-navigation'>
-					{width >= 1000 && navigationItems}
+					{/* {width >= 1000 && navigationItems}
 					{width < 1000 && (
 						<div
 							className='navbar-hamburger'
@@ -38,7 +38,7 @@ const Navbar = () => {
 						>
 							<Hamburger />
 						</div>
-					)}
+					)} */}
 				</div>
 				<div className='navbar-emblem'>
 					{/** TODO: Replace this with metarelics logo */}
