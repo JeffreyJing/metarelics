@@ -23,13 +23,13 @@ function generateMerkleTree() {
 }
 
 export function generateMerkleProof(address) {
-	const addressInTokens = TOKEN_HOLDERS.find((tokenAddress) => tokenAddress === address);
+	const addressInTokens = isUserWhitelisted(address);
 	if (!addressInTokens) {
 		throw new Error('User not in whitelist');
 	}
 
 	const merkleTree = generateMerkleTree();
-	// console.log(merkleTree.getHexRoot());
+	console.log("ROOT", merkleTree.getHexRoot());
 	const proof = merkleTree.getHexProof(hashToken(address));
 	return proof;
 }
