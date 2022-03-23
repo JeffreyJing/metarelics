@@ -15,14 +15,14 @@ export const IKONICK_TWITTER_URL = "https://twitter.com/TeamIKONICK";
 export const IKONICK_INSTAGRAM_URL = "https://www.instagram.com/ikonick/";
 
 const MAINNET_CONTRACT_ADDRESS = '';
-const TESTNET_CONTRACT_ADDRESS = '0x725513782c88455a09ff143590588a6a3a253ffc';
+const TESTNET_CONTRACT_ADDRESS = '0x1ECFDCcf97EdD64Fb73890Ca4541f306456A21eC';
 
 export const CONTRACT_ADDRESS = TESTING_MODE ? TESTNET_CONTRACT_ADDRESS : MAINNET_CONTRACT_ADDRESS;
 export const WHITELIST_PRICE = TESTING_MODE ? 0 : 0.2;
 export const WHITELIST_LIMIT = 1;
 export const REGULAR_PRICE = TESTING_MODE ? 0 : 0.2;
-export const REGULAR_LIMIT = 2;
-export const MAX_MINT = 2323;
+export const REGULAR_LIMIT = 1;
+export const MAX_MINT = 1000;
 
 export const MINT_TIME = TESTING_MODE
     ? Date.now() + 5000
