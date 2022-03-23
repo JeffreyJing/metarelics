@@ -75,7 +75,7 @@ export const MintNowButton = () => {
 
 	useEffect(() => {
 		setIsUserInWhitelist(isUserWhitelisted(address));
-	}, [address]);
+	}, [connected, address]);
 
 	function createContract() {
 		return new web3.eth.Contract(
