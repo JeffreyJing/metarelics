@@ -2,7 +2,7 @@ import TOKEN_HOLDERS from '../assets/whitelist-tokens/holders.json';
 
 export { TOKEN_HOLDERS };
 
-export const TESTING_MODE = true;
+export const TESTING_MODE = false;
 
 export const DISCORD_URL = "";
 export const TWITTER_URL = "https://twitter.com/metarelics";
