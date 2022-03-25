@@ -6,7 +6,7 @@ export const TESTING_MODE = false;
 
 export const DISCORD_URL = "";
 export const TWITTER_URL = "https://twitter.com/metarelics";
-export const OPENSEA_URL = ""; // TODO
+export const OPENSEA_URL = "https://opensea.io/collection/relics-pass"; // TODO
 export const LOOKSRARE_URL = ""; // TODO
 export const INSTAGRAM_URL = "https://www.instagram.com/metarelics/";
 export const PRINTS_URL = "https://www.metarelics.co/";

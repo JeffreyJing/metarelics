@@ -24,7 +24,7 @@ export const Banner = () => {
 			<MintCount />
 			{/* <ConnectButton /> */}
 			<MintNowButton />
-			<a href={OPENSEA_URL}>
+			<a href={OPENSEA_URL} target="_blank" rel="noopener noreferrer">
 				<button className='banner-opensea' role="link">
 					<OpenseaLogoDark />BUY ON OPENSEA
 				</button>
