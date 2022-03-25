@@ -4,7 +4,7 @@ export { TOKEN_HOLDERS };
 
 export const TESTING_MODE = true;
 
-export const DISCORD_URL = "https://discord.com/";
+export const DISCORD_URL = "";
 export const TWITTER_URL = "https://twitter.com/metarelics";
 export const OPENSEA_URL = ""; // TODO
 export const LOOKSRARE_URL = ""; // TODO

@@ -47,7 +47,7 @@ const Navbar = () => {
 				<div className='navbar-items'>
 					<a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><TwitterLogo /></a>
 					<a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"><InstagramLogo /></a>
-					<a href={DISCORD_URL} target="_blank" rel="noopener noreferrer"><DiscordLogo /></a>
+					<DiscordLogo />
 				</div>
 			</div>
 			<AnimateHeight duration={500} height={(width < 1000 && navOpen) ? 'auto': 0}>
