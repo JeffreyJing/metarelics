@@ -74,7 +74,8 @@ export const MintNowButton = () => {
 	}, [connected, mintState]);
 
 	useEffect(() => {
-		console.log("IS USER", isUserWhitelisted('0xee28c503BE63731EfBcEe38835b0A992B90E676a'), isUserWhitelisted('0x7b1319a57e7E8a6e682Ba3534A1047692F047F96'))
+		// console.log("IS USER", isUserWhitelisted('0xee28c503BE63731EfBcEe38835b0A992B90E676a'), isUserWhitelisted('0x7b1319a57e7E8a6e682Ba3534A1047692F047F96'))
+		// generateMerkleProof("0xe938ba103e1492889a1241bfd805a2ae82682c4c");
 		setIsUserInWhitelist(isUserWhitelisted(address));
 	}, [connected, address]);
 
