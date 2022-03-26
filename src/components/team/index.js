@@ -2,7 +2,6 @@ import React from 'react';
 import { OpenseaLogo, TwitterLogo } from '../../assets/icons/logos';
 import './index.css';
 
-// NEED TO GET INSTAGRAM LOGO
 const TEAM_MEMBERS = [{
     name: 'Jeff Cole',
     description: "Digital artist and Co-Founder of Ikonick. Born in the Michael Jordan era of Chicago, Cole developed an early love for diverse cultural genres emblematic of childhood nostalgia. Cole’s art features masterful mashups of your favorite cultural icons. His consistent output of unique content has attracted attention from the biggest brands in the world, and garnered a cult-like following on Instagram.",

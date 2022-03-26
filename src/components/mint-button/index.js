@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react';
-import { CONTRACT_ADDRESS, MAX_MINT, MINT_TIME, REGULAR_LIMIT, REGULAR_MINT_TIME, REGULAR_PRICE, WHITELIST_LIMIT, WHITELIST_MINT_TIME, WHITELIST_PRICE } from '../../constants';
+import { CONTRACT_ADDRESS, MINT_TIME, REGULAR_LIMIT, REGULAR_PRICE, WHITELIST_LIMIT, WHITELIST_PRICE } from '../../constants';
 import { Web3Context } from '../../context/web3-context';
 import { generateMerkleProof, isUserWhitelisted } from '../../utils/merkle';
 import nftAbi from '../../assets/abis/nft-abi.json';
@@ -14,11 +14,11 @@ const MINT_STATE = {
 export const MintNowButton = () => {
 	const { connect, connected, disconnect, web3, address } = useContext(Web3Context);
 	const [mintState, setMintState] = useState(MINT_STATE.DISABLED);
-	const [error, setError] = useState(undefined);
+	const [setError] = useState(undefined);
 	const [purchasing, setPurchasing] = useState(false);
 	const [mintSuccess, setMintSuccess] = useState(undefined);
-	const [totalMintedCount, setTotalMintedCount] = useState(undefined);
-	const [userTotalMintedCount, setUserTotalMintedCount] = useState(undefined);
+	const [setTotalMintedCount] = useState(undefined);
+	const [setUserTotalMintedCount] = useState(undefined);
 	const [userMintSize, setUserMintSize] = useState(undefined);
 	const [isUserInWhitelist, setIsUserInWhitelist] = useState(false);
 	const [isSecondSale, setIsSecondSale] = useState(false);
@@ -30,15 +30,13 @@ export const MintNowButton = () => {
 	 * It runs a function every second to get the updated state from the contract.
 	 */
 	 useEffect(() => {
-		let messageShowed = false;
-		// console.log(generateMerkleProof(address));
 		let mintCounterInterval = setInterval(async () => {
 			console.log("CONNECTED", connected);
 			if (connected) {
 				try {
 					const nftContract = createContract();
 					const totalSupply = await nftContract.methods.totalSupply().call();
-					setTotalMintedCount(Number(totalSupply) - 1);	// -1 for +1 indexing
+					setTotalMintedCount(Number(totalSupply) - 1);
 					const userBalance = await nftContract.methods.balanceOf(address).call();
 					setUserTotalMintedCount(Number(userBalance));
 
@@ -58,9 +56,6 @@ export const MintNowButton = () => {
 							: MINT_STATE.WHITELIST
 					);
 				} catch(e) {
-					// Ideally should never get here so long as MM is connected.
-					// setError("There was an error with contacting the contract...");
-
 					console.log("ERROR", e)
 				}
 			}
@@ -74,8 +69,6 @@ export const MintNowButton = () => {
 	}, [connected, mintState]);
 
 	useEffect(() => {
-		// console.log("IS USER", isUserWhitelisted('0xee28c503BE63731EfBcEe38835b0A992B90E676a'), isUserWhitelisted('0x7b1319a57e7E8a6e682Ba3534A1047692F047F96'))
-		// generateMerkleProof("0xe938ba103e1492889a1241bfd805a2ae82682c4c");
 		setIsUserInWhitelist(isUserWhitelisted(address));
 	}, [connected, address]);
 
@@ -102,8 +95,6 @@ export const MintNowButton = () => {
 		setMintSuccess(undefined);
 		const nftContract = createContract();
 		let merkleProof = [];
-
-		// COMMENT THIS OUT IF MERKLE PROOF IS FAILING
 		if (!(isBackupSale || isSecondSale)) {
 			try {
 				merkleProof = generateMerkleProof(address);
@@ -114,15 +105,8 @@ export const MintNowButton = () => {
 				return;
 			}
 		}
-		///////////////////////////////////////////////
 
 		const priceToUse = mintState === MINT_STATE.WHITELIST ? WHITELIST_PRICE : REGULAR_PRICE;
-
-		// console.log(countToMint, priceToUse, merkleProof);
-
-		// const est = await pengusContract.methods.mint(web3.utils.toHex(countToMint),
-		// merkleProof).estimateGas();
-		// console.log(est);
 		const gasPrice = await web3.eth.getGasPrice();
 
 		console.log("MERKLE", merkleProof);
@@ -130,9 +114,8 @@ export const MintNowButton = () => {
 			const tx = {
 				from: address,
 				to: CONTRACT_ADDRESS,
-				value: web3.utils.toWei((/*countToMint * */ priceToUse).toString(), "ether"),
+				value: web3.utils.toWei((priceToUse).toString(), "ether"),
 				data: getDataFunction(),
-				// gas: `${88000 + (3500 * countToMint)}`,
 			};
 			const receipt = await web3.eth.sendTransaction(tx);
 			setPurchasing(false);
@@ -165,7 +148,6 @@ export const MintNowButton = () => {
 		}
 	}
 
-
 	let mintText;
 	let userMintSupplyMessage;
 	switch(mintState) {
@@ -192,12 +174,6 @@ export const MintNowButton = () => {
 
 	return (
 		<div className='mint-overall-container' id='mint'>
-			{/* {error && (
-				<div className={`mint-msg mint-error`}>
-					Error: {error}
-				</div>
-			)} */}
-			
 			{mintSuccess && (
 				<div className='mint-msg mint-success'>Successfully minted {mintSuccess.size} NFTs! Transaction info: <a href={`https://etherscan.io/tx/${mintSuccess.transactionHash}`} target="_blank" rel="noopener noreferrer">{mintSuccess.transactionHash.substring(0, 9)}...</a></div>
 			)}
@@ -205,14 +181,6 @@ export const MintNowButton = () => {
 			{connected && (
 				<div className={'mint-button-connected'}>
 					<a href='#' onClick={disconnect}>Connected.</a>
-					{
-						isUserInWhitelist
-						? (
-							<p>Congrats! You're on the Relics List.</p>
-						) : (
-							<p>Sorry, you're not on the Relics List.</p>
-						)
-					}
 				</div>
 			)}
 			
@@ -235,9 +203,6 @@ export const MintNowButton = () => {
 						: "Connect Wallet"
 				} 
 			</button>
-			{/* <div className='mint-disconnect'>
-				{connected && <a href='#' onClick={disconnect}>Disconnect wallet</a>}
-			</div> */}
 		</div>
 	);
 }

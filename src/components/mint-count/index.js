@@ -5,7 +5,7 @@ import nftAbi from '../../assets/abis/nft-abi.json';
 import { CONTRACT_ADDRESS } from '../../constants';
 
 export const MintCount = () => {
-    const { connect, connected, web3, address } = useContext(Web3Context)
+    const { connected, web3, address } = useContext(Web3Context)
     const [totalMintedCount, setTotalMintedCount] = useState(0);
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export const MintCount = () => {
 
     return (
         <div className='mint-count'>
-            {totalMintedCount}/1000 MINTED
+            SOLD OUT! {/*{totalMintedCount}/1000 MINTED */}
         </div>
     )
 }

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import AnimateHeight from 'react-animate-height';
 import './index.css';
-import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL, PRINTS_URL } from '../../constants';
-import { DiscordLogo, Hamburger, InstagramLogo, LooksRareLogo, OpenseaLogo, TwitterLogo } from '../../assets/icons/logos';
+import { INSTAGRAM_URL, TWITTER_URL, PRINTS_URL } from '../../constants';
+import { DiscordLogo, InstagramLogo, TwitterLogo } from '../../assets/icons/logos';
 
 const Navbar = () => {
 	const [width, setWidth] = useState(window.innerWidth);
-	const [navOpen, setNavOpen] = useState(false);
+	const [navOpen] = useState(false);
 
 	useEffect(() => {
         window.addEventListener("resize", () => {
@@ -41,7 +41,6 @@ const Navbar = () => {
 					)} */}
 				</div>
 				<div className='navbar-emblem'>
-					{/** TODO: Replace this with metarelics logo */}
 					METARELICS
 				</div>
 				<div className='navbar-items'>
