@@ -46,6 +46,11 @@
 }
 
 @media screen and (max-width: 1000px) {
-	.home {
+	.logo img {
+		width: 15vw;
+	}
+
+	.banner {
+		margin-top: 10vh;
 	}
 }
