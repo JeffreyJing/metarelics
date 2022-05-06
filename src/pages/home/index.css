@@ -84,12 +84,26 @@
 	justify-content: space-between;
 }
 
-
 .text-us-at p {
 	margin: 0px;
+	margin-top: 5px;
+}
+
+.socials {
+	display: flex;
+	column-gap: 50px;
 }
 
 @media screen and (max-width: 1000px) {
+	.bottom {
+		flex-direction: column;
+		row-gap: 5vh;
+	}
+
+	.socials {
+		justify-content: center;
+	}
+
 	.logo img {
 		width: 15vw;
 	}
