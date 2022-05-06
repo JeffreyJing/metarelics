@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DiscordLogo, InstagramLogo, OpenseaLogo, TwitterLogo } from '../../assets/icons/logos';
 import logo from '../../assets/images/logo.png';
+import spinningCube from '../../assets/images/spinning-cube.gif';
 import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, OWNER_PORTAL_URL, TWITTER_URL } from '../../constants';
 import './index.css';
 
@@ -29,7 +30,7 @@ const Home = () => {
 				<div className='banner'>
 					<div className='metarelics'>METARELICS</div>
 					<div className='spinning-cube'>
-						<img src={logo} alt={"Spinning Relic"} />
+						<img src={spinningCube} alt={"Spinning Relic"} />
 					</div>
 				</div>
 				<div className='tagline'>

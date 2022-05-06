@@ -21,13 +21,13 @@
 
 .banner {
 	width: 100%;
-	margin-top: 2vh;
+	margin-top: 0vh;
 	position: relative;
 }
 
 .metarelics {
 	font-size: 12vw;
-	padding: 5vh;
+	padding: 10vh;
 	font-family: 'Interstate Bold';
 }
 
@@ -110,12 +110,12 @@
 
 	.metarelics {
 		font-size: 14vw;
-		padding: 2vh;
+		padding: 10vh 2vh;
 		font-family: 'Interstate Bold';
 	}
 
 	.banner {
-		margin-top: 6vh;
+		margin-top: 2vh;
 	}
 
 	.tagline {
