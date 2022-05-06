@@ -51,7 +51,7 @@ const Home = () => {
 				<div className='bottom'>
 					<div className='text-us-at'>
 						<p>Text us at</p>
-						<p>+1 (480) 530-6686</p>
+						<p className='telephone'><a href='tel:14805306686'>+1 (480) 530-6686</a></p>
 					</div>
 					<div className='socials'>
 						<a href={DISCORD_URL}>

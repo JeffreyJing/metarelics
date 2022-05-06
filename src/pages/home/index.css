@@ -69,6 +69,26 @@
 	margin-top: 5vh;
 }
 
+.telephone a {
+	font-family: 'Interstate Bold';
+	text-decoration: none;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0px;
+	width: calc(100% - 10vh);
+	padding: 5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.text-us-at p {
+	margin: 0px;
+}
+
 @media screen and (max-width: 1000px) {
 	.logo img {
 		width: 15vw;
