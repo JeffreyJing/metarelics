@@ -5,6 +5,7 @@
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	text-align: center;
 }
 
 .top-menu {
@@ -26,8 +27,8 @@
 
 .metarelics {
 	font-size: 12vw;
-	text-align: center;
 	padding: 5vh;
+	font-family: 'Interstate Bold';
 }
 
 .spinning-cube {
@@ -45,12 +46,50 @@
 	height: 100%;
 }
 
+.tagline {
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Interstate Bold';
+}
+
+.relics-pass-button {
+	margin-top: 5vh;
+}
+
+.description {
+	margin: auto;
+	margin-top: 3vh;
+	width: 50%;
+	font-size: 20px;
+	line-height: 1.5;
+	font-family: 'Interstate Light';
+}
+
+.learn-more-button {
+	margin-top: 5vh;
+}
+
 @media screen and (max-width: 1000px) {
 	.logo img {
 		width: 15vw;
 	}
 
+	.metarelics {
+		font-size: 14vw;
+		padding: 2vh;
+		font-family: 'Interstate Bold';
+	}
+
 	.banner {
-		margin-top: 10vh;
+		margin-top: 6vh;
+	}
+
+	.tagline {
+		font-size: 15px;
+	}
+
+	.description {
+		width: 90%;
+		font-size: 12px;
 	}
 }

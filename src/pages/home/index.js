@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { DiscordLogo, InstagramLogo, OpenseaLogo, TwitterLogo } from '../../assets/icons/logos';
 import logo from '../../assets/images/logo.png';
-import { OWNER_PORTAL_URL } from '../../constants';
+import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, OWNER_PORTAL_URL, TWITTER_URL } from '../../constants';
 import './index.css';
 
 const Home = () => {
@@ -29,6 +30,42 @@ const Home = () => {
 					<div className='metarelics'>METARELICS</div>
 					<div className='spinning-cube'>
 						<img src={logo} alt={"Spinning Relic"} />
+					</div>
+				</div>
+				<div className='tagline'>
+					<p>Art. Culture. Entrepreneurship.</p>
+				</div>
+				<div className='relics-pass-button'>
+					<a href={OPENSEA_URL}>
+						<button>RELICS PASS</button>
+					</a>
+				</div>
+				<div className='description'>
+					A private holder only collection of 1000 individuals. Relics Pass holders get access to the Relic Room and a number of ever-growing benefits.
+				</div>
+				<div className='learn-more-button'>
+					<a href=''>
+						<button>LEARN MORE</button>
+					</a>
+				</div>
+				<div className='bottom'>
+					<div className='text-us-at'>
+						<p>Text us at</p>
+						<p>+1 (480) 530-6686</p>
+					</div>
+					<div className='socials'>
+						<a href={DISCORD_URL}>
+							<DiscordLogo />
+						</a>
+						<a href={TWITTER_URL}>
+							<TwitterLogo />
+						</a>
+						<a href={INSTAGRAM_URL}>
+							<InstagramLogo />
+						</a>
+						<a href={OPENSEA_URL}>
+							<OpenseaLogo />
+						</a>
 					</div>
 				</div>
 			</div>
