@@ -6,7 +6,7 @@ import TermsOfUse from '../pages/terms-of-use';
 const Pages = () => {
 	return (
 		<>
-			<Navbar />
+			{/* <Navbar /> */}
 			<Routes>
 				<Route index path='/' element={<Home />} />
 				<Route path='/terms-of-use' element={<TermsOfUse />} />

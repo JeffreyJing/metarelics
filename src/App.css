@@ -14,27 +14,29 @@
 	--accent-color: rgb(199, 208,216);
 	--side-margin: 10vw;
 	--side-margin-mobile: 5vw;
+	--button-color: rgb(35,116,145);
+	--button-color-2: rgb(18, 60, 75);
 }
 
 html, body {
 	/* background-color: black; */
 	font-family: 'Interstate Bold', Helvetica, sans-serif;
-	color: black;
+	color: var(--main-color);
 	padding: 0px;
 	margin: 0px;
 	overflow-x: hidden;
 }
 
 button {
-	background: black;
+	background: linear-gradient(to right, var(--button-color-2), var(--button-color));
 	color: var(--main-color);
 	/* border: 2px solid var(--main-color); */
 	border: none;
 	border-radius: 8px;
-	padding: 8px;
+	padding: 10px 30px;
 	cursor: pointer;
 	font-family: 'Interstate Bold', Helvetica, sans-serif;
-	width: 70%;
+	/* width: 70%; */
 	font-size: 20px;
 
 	transition: box-shadow 250ms ease;

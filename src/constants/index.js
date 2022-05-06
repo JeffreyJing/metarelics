@@ -4,6 +4,7 @@ export { TOKEN_HOLDERS };
 
 export const TESTING_MODE = false;
 
+export const OWNER_PORTAL_URL = 'https://www.nftportal.xyz/metarelics/home';
 export const DISCORD_URL = "";
 export const TWITTER_URL = "https://twitter.com/metarelics";
 export const OPENSEA_URL = "https://opensea.io/collection/relics-pass"; // TODO

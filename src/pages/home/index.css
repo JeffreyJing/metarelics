@@ -1,482 +1,51 @@
-:root {
-	--four-square-box-size: 300px;
-	--four-square-image-size: 150px;
-}
-
-.home-banner-container {
+.home {
+	background-image: url(../../assets/images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
 	width: 100vw;
-	overflow-x: hidden;
-}
-
-.home-banner {
-	width: 100vw;
-}
-
-.relics-pass-access {
-	background-color: black;
-	padding-left: var(--side-margin);
-	padding-right: var(--side-margin);
-	padding-top: 70px;
-	padding-bottom: 50px;
-	text-align: center;
-	color: white;
-}
-
-.relics-pass-access h2 {
-	margin-top: 0px;
-	font-size: 50px;
-}
-
-.relics-pass-access p {
-	font-size: 30px;
-	color: gray;
-}
-
-.relics-pass-access-side {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-.relics-pass-access-side h2 {
-	font-size: 40px;
-}
-
-.relics-pass-access-side p {
-	font-size: 25px;
-}
-
-.projects-coming-soon {
-	margin-top: 70px;
-	margin-bottom: 70px;
-	margin-left: 20vw;
-	margin-right: 20vw;
-}
-
-.projects-coming-soon h2 {
-	font-size: 40px;
-	text-align: center;
-}
-
-.projects-items {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	text-align: center;
-	column-gap: 20px;
-}
-
-.projects-items p {
-	font-size: 20px;
-}
-
-.projects-item {
-	background-color: var(--accent-color);
-	border-radius: 20px;
 	overflow: hidden;
+}
+
+.top-menu {
 	display: flex;
+	padding: 20px 5vw;
 	align-items: center;
-	justify-content: center;
-	font-size: 9em;
-	color: white;
+	justify-content: space-between;
 }
 
-.projects-item img {
+.logo img {
+	width: 5vw;
+}
+
+.banner {
 	width: 100%;
-	height: 100%;
-}
-
-.home-side-by-side {
-	display: grid;
-	margin-left: var(--side-margin);
-	margin-right: var(--side-margin);
-	grid-template-columns: 1fr 400px;
-	grid-template-rows: auto;
-	column-gap: 80px;
-	row-gap: 40px;
-}
-
-.home-four-square {
-	display: grid;
-	place-content: center;
-}
-
-.four-square-box {
-	display: grid;
-	height: var(--four-square-box-size);
-	width: var(--four-square-box-size);
-	grid-template-columns: var(--four-square-image-size) var(--four-square-image-size);
-	grid-template-rows: var(--four-square-image-size) var(--four-square-image-size);
-	border-radius: 4px;
-	overflow: hidden;
-}
-
-.four-square-box > img {
-	height: var(--four-square-image-size);
-	width: var(--four-square-image-size);
-}
-
-.team {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-.team-items {
-	background-color: var(--accent-color);
-	padding: 5%;
-	padding-top: 10%;
-	padding-bottom: 10%;
-}
-
-.first-holder-items {
-	background-color: black;
-	padding: 5%;
-	/* padding-top: 15%; */
-	color: white;
-}
-
-.first-holder-items h2 {
-	font-size: 40px;
-}
-
-.first-holder-items p {
-	margin: 0px;
-	font-family: 'Interstate Light';
-	font-size: 20px;
-}
-
-.first-holder-items div {
-	margin-top: 120px;
-	width: 75%;
-}
-
-@media screen and (max-width: 1100px) {
-	.first-holder-items div {
-		margin-top: 60px;
-	}
-}
-
-.team-items h2 {
-	margin-top: 0px;
-	font-size: 40px;
-}
-
-.team-items h3 {
-	font-size: 30px;
-}
-
-.team-item {
-	margin-top: 30px;
-}
-
-.team-item p {
-	font-size: 20px;
-	font-family: 'Interstate Light';
-}
-
-.team-item-icons svg {
-	color: white !important;
-	fill: white !important;
-}
-
-.team-item-icons {
-	display: flex;
-	column-gap: 15px;
-}
- 
-.team-picture {
-	background-image: url(../../assets/images/team.png);
-	background-size: cover;
-	background-position: center;
-}
-
-.first-holder {
-	display: flex;
-	/* grid-template-columns: 5fr 7fr; */
-}
-
-/* .first-holder-picture {
-	background-image: url(../../assets/images/relicpunks.jpg);
-	background-size: cover;
-	background-position: center;
-	height: 50vw;
-	min-height: 100%;
-} */
-
-.first-holder-picture {
-	/* width: 33vw; */
-}
-
-.first-holder-picture img {
-	height: 100%;
-}
-
-.first-holder-picture {
-	height: 700px;
-	width: fit-content;
-}
-
-.mission {
-	padding-top: 70px;
-	padding-bottom: 70px;
-	padding-left: var(--side-margin);
-	padding-right: var(--side-margin);
-	background-color: black;
-	margin-top: 0px;
-	color: white;
-	text-align: center;
-	font-size: 40px;
-}
-
-.mission-items {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 20%;
-}
-
-.mission h2 {
-	margin-top: 0px;
-}
-
-.mission p {
-	margin-top: 0px;
-}
-
-.build-our-bond {
+	margin-top: 2vh;
 	position: relative;
-	overflow: hidden;
-	margin-bottom: 0px;
 }
 
-.build-our-bond img {
-	width: 100%;
-	margin-top: 0%; /*-66%*/
-	margin-left: 0%; /*-26%*/
-	margin-bottom: -5px;
-}
-
-.build-our-bond-content {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 60%;
-	margin-top: 50px;
-	margin-left: 6vw;
-	margin-right: 6vw;
-	color: white;
+.metarelics {
+	font-size: 12vw;
 	text-align: center;
+	padding: 5vh;
 }
 
-.build-our-bond-content h2 {
-	font-size: 30px;
+.spinning-cube {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	text-align: center;
+	/* margin-top: -10em; */
+	height: 100%;
 }
 
-.build-our-bond-content p {
-	font-family: 'Interstate Light';
-	font-size: 20px;
-}
-
-.build-our-bond-items {
-	margin-top: 100px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 50px;
-}
-
-.footbar {
-	background-color: black;
-	overflow: hidden;
-	color: white;
-
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-
-	padding-top: 50px;
-	padding-bottom: 100px;
-}
-
-.footbar-logos {
-	display: flex;
-	justify-content: center;
-	column-gap: 40px;
-}
-
-.footbar-powered-by {
-	text-align: right;
-	font-family: 'Interstate Light';
-	padding-right: 10vw;
-}
-
-.footbar svg {
-	fill: white;
-	height: 60px;
-	width: 60px;
-}
-
-.terms-of-use {
-	margin-top: 50px;
-	padding-right: 0px;
+.spinning-cube img {
+	height: 100%;
 }
 
 @media screen and (max-width: 1000px) {
-	.first-holder-picture img {
-		width: 100%;
-		height: auto;
-	}
-
-	.first-holder-picture {
-		width: 100%;
-		height: fit-content;
-	}
-
-	/* .first-holder-picture {
-		background-image: url(../../assets/images/relicpunks.jpg);
-		background-size: cover;
-		background-position: center;
-		height: 100vw;
-	} */
-
-	.first-holder-items {
-		text-align: center;
-	}
-	
-	.first-holder-items p {
-		font-family: 'Interstate Light';
-		text-align: center;
-		margin: auto
-	}
-	
-	.first-holder-items div {
-		margin: auto;
-		margin-top: 50px;
-		text-align: center;
-	} 
-
-	.footbar {
-		grid-template-columns: 1fr;
-	}
-
-	.footbar-powered-by {
-		text-align: center;
-		margin-top: 50px;
-		padding-right: 0px;
-	}
-
-	.build-our-bond img {
-		width: 200%;
-		margin-top: 0%;
-		margin-left: -50%;
-	}
-
-	.build-our-bond-items {
-		grid-template-columns: 1fr;
-	}
-
-	.projects-coming-soon {
-		margin-left: 10vw;
-		margin-right: 10vw;
-		margin-top: 40px;
-		margin-bottom: 20px;
-	}
-	
-	.projects-items {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 2fr 1fr 2fr 1fr;
-	}
-
-	.projects-item {
-		height: 93%;
-	}
-
-	.projects-items p {
-		margin-top: 0px;
-	}
-
-	.team {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	.first-holder {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	/* .first-holder-picture {
-		height: 465px;
-	} */
-	
-	.team-items {
-		background-color: var(--accent-color);
-		padding: 5%;
-		text-align: center;
-	}
-	
-	.team-items h2 {
-		margin-top: 0px;
-	}
-	
-	.team-item {
-		margin-top: 30px;
-	}
-	
-	.team-item-icons svg {
-		color: white !important;
-		fill: white !important;
-	}
-
-	.team-item-icons {
-		display: flex;
-		column-gap: 15px;
-		justify-content: center;
-	}
-
-	.mission {
-		padding-top: 70px;
-		padding-bottom: 70px;
-		padding-left: var(--side-margin);
-		padding-right: var(--side-margin);
-		background-color: black;
-		margin-top: 0px;
-		color: white;
-		text-align: center;
-		font-size: 40px;
-	}
-	
-	.mission-items {
-		grid-template-columns: 1fr;
-		column-gap: 15%;
-	}
-	
-	.mission h2 {
-		font-size: 45px;
-		margin-top: 0px;
-	}
-	
-	.mission p {
-		margin-top: 0px;
-	}
-
-	.relics-pass-access-side {
-		display: grid;
-		grid-template-columns: 1fr;
+	.home {
 	}
 }
-
-.tail {
-	text-align: center;
-	color: var(--accent-color);
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-
-.tail-1 {
-	text-align: right;
-	font-size: 15px;
-	margin-bottom: 20px;
-	color:rgb(14, 13, 13);
-}
-
-/* h3 {
-	text-align: center;
-	font-family: "Interstate Bold";
-	color: rgb(189, 121, 121);
-} */
