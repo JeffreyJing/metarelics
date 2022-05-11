@@ -3,6 +3,7 @@ import { DiscordLogo, InstagramLogo, OpenseaLogo, TwitterLogo } from '../../asse
 import logo from '../../assets/images/logo.png';
 import spinningCube from '../../assets/images/spinning-cube.gif';
 import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, OWNER_PORTAL_URL, TWITTER_URL } from '../../constants';
+import benefits from '../../assets/pdfs/metarelics-benefits.pdf';
 import './index.css';
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
 						<img src={logo} alt={"Metarelics Logo"} />
 					</div>
 					<div className='portal-button-container'>
-						<a href={OWNER_PORTAL_URL}>
+						<a href={OWNER_PORTAL_URL} target="_blank" rel="noopener noreferrer">
 							<button>OWNER PORTAL</button>
 						</a>
 					</div>
@@ -37,7 +38,7 @@ const Home = () => {
 					<p>Art. Culture. Entrepreneurship.</p>
 				</div>
 				<div className='relics-pass-button'>
-					<a href={OPENSEA_URL}>
+					<a href={OPENSEA_URL} target="_blank" rel="noopener noreferrer">
 						<button>RELICS PASS</button>
 					</a>
 				</div>
@@ -45,26 +46,26 @@ const Home = () => {
 					A private holder only collection of 1000 individuals. Relics Pass holders get access to the Relic Room and a number of ever-growing benefits.
 				</div>
 				<div className='learn-more-button'>
-					<a href=''>
+					<a href={benefits} target="_blank" rel="noopener noreferrer">
 						<button>LEARN MORE</button>
 					</a>
 				</div>
 				<div className='bottom'>
 					<div className='text-us-at'>
 						<p>Text us at</p>
-						<p className='telephone'><a href='tel:14805306686'>+1 (480) 530-6686</a></p>
+						<p className='telephone'><a href='https://my.community.com/metarelics' target="_blank" rel="noopener noreferrer">+1 (480) 530-6686</a></p>
 					</div>
 					<div className='socials'>
-						<a href={DISCORD_URL}>
+						<a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
 							<DiscordLogo />
 						</a>
-						<a href={TWITTER_URL}>
+						<a href={TWITTER_URL} target="_blank" rel="noopener noreferrer">
 							<TwitterLogo />
 						</a>
-						<a href={INSTAGRAM_URL}>
+						<a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
 							<InstagramLogo />
 						</a>
-						<a href={OPENSEA_URL}>
+						<a href={OPENSEA_URL} target="_blank" rel="noopener noreferrer">
 							<OpenseaLogo />
 						</a>
 					</div>

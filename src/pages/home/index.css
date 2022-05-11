@@ -47,6 +47,7 @@
 }
 
 .tagline {
+	margin-top: -5vh;
 	text-align: center;
 	font-size: 30px;
 	font-family: 'Interstate Bold';
@@ -120,6 +121,7 @@
 
 	.tagline {
 		font-size: 15px;
+		margin-top: 0px;
 	}
 
 	.description {
