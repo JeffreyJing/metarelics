@@ -1,4 +1,5 @@
 body {
+	overflow: hidden;
 }
 
 .home {
@@ -9,9 +10,6 @@ body {
 	width: 100vw;
 	overflow: hidden;
 	text-align: center;
-
-	min-height: 1000px;
-
 }
 
 .top-menu {
@@ -75,6 +73,7 @@ body {
 .learn-more-button {
 	margin-top: 5vh;
 	z-index: 999;
+	margin-bottom: 1vh;
 }
 
 .telephone a {
