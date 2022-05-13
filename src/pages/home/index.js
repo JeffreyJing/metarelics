@@ -21,29 +21,6 @@ const Home = () => {
 	return (
 		<>
 			<Banner />
-
-			{/* <MintNowButton /> */}
-
-			{/* <div className='relics-pass-access' id='about'>
-				<h2>RELICS PASS ACCESS</h2>
-			    <p>Our team is a dedicated to bringing value in both the digital and physical worlds.</p>
-				<div className='relics-pass-access-side'>
-					<div>
-						<h2>Digital</h2>
-						<p>First access to Jeff Cole's genesis project</p>
-						<p>Free Relic Punk of your choosing</p>
-						<p>First access to Metarelics partner projects</p>
-						<p>Access to the Relic Room Discord</p>
-					</div>
-					<div>
-						<h2>Physical</h2>
-						<p>Exclusive physical products</p>
-						<p>50% off NFT canvas prints for life</p>
-						<p>Weekly AMA with Metarelics team</p>
-						<p>Exclusive community events</p>
-					</div>
-				</div>
-			</div> */}
 			<div className='first-holder'>
 				{width >= 1000 && (
 					<div className='first-holder-picture'>
