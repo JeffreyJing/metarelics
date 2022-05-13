@@ -55,9 +55,10 @@ const Home = () => {
 						<img src={spinningCube} alt={"Spinning Relic"} />
 					</div>
 				</div>
-				{width > 1000 && midContent}
+				{/* {width > 1000 && midContent} */}
 				<div className='bottom'>
-					{width <= 1000 && midContent}
+					{/* {width <= 1000 && midContent} */}
+					{midContent}
 					<div className='bottom-content'>
 						<div className='text-us-at'>
 							<p>Text us at</p>
