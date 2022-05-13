@@ -78,6 +78,10 @@
 .bottom {
 	position: absolute;
 	bottom: 0px;
+	width: 100%;
+}
+
+.bottom-content {
 	width: calc(100% - 10vh);
 	padding: 5vh;
 	display: flex;
@@ -96,9 +100,10 @@
 }
 
 @media screen and (max-width: 1000px) {
-	.bottom {
+	.bottom-content {
 		flex-direction: column;
 		row-gap: 5vh;
+		padding-top: 3vh;
 	}
 
 	.socials {
@@ -113,6 +118,14 @@
 		font-size: 14vw;
 		padding: 10vh 2vh;
 		font-family: 'Interstate Bold';
+	}
+
+	.relics-pass-button {
+		margin-top: 3vh;
+	}
+
+	.learn-more-button {
+		margin-top: 3vh;
 	}
 
 	.banner {
