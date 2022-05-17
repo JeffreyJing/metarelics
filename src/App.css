@@ -28,7 +28,8 @@ html, body {
 }
 
 button {
-	background: linear-gradient(to right, var(--button-color-2), var(--button-color));
+	/* background: linear-gradient(to right, var(--button-color-2), var(--button-color)); */
+	background-color: #111319;
 	color: var(--main-color);
 	/* border: 2px solid var(--main-color); */
 	border: none;
@@ -42,9 +43,9 @@ button {
 	transition: box-shadow 250ms ease;
 }
 
-button:hover {
+/* button:hover {
 	box-shadow: 0px 0px 6px 2px var(--hover-color);
-}
+} */
 
 a, a:visited {
 	color: inherit;

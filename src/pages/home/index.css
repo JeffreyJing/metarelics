@@ -2,6 +2,11 @@ body {
 	overflow: hidden;
 }
 
+.owner-portal-button {
+	background: none;
+	border: 2px solid white;
+}
+
 .home {
 	background-image: url(../../assets/images/bg.jpg);
 	background-size: cover;

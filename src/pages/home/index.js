@@ -45,7 +45,7 @@ const Home = () => {
 					</div>
 					<div className='portal-button-container'>
 						<a href={OWNER_PORTAL_URL} target="_blank" rel="noopener noreferrer">
-							<button>OWNER PORTAL</button>
+							<button className='owner-portal-button'>OWNER PORTAL</button>
 						</a>
 					</div>
 				</div>
