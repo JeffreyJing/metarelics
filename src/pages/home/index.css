@@ -64,8 +64,10 @@ body {
 
 .relics-pass-button {
 	margin-top: 5vh;
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
 }
-
 .description {
 	margin: auto;
 	margin-top: 3vh;

@@ -24,14 +24,12 @@ const Home = () => {
 				<a href={OPENSEA_URL} target="_blank" rel="noopener noreferrer">
 					<button>RELICS PASS</button>
 				</a>
-			</div>
-			<div className='description'>
-				A private holder only collective of 1000 individuals. Relics Pass holders get access to the Relic Room and a number of ever-growing benefits.
-			</div>
-			<div className='learn-more-button'>
 				<a href={benefits} target="_blank" rel="noopener noreferrer">
 					<button>LEARN MORE</button>
 				</a>
+			</div>
+			<div className='description'>
+				The Relics Pass is a private holder only collective of 1000 individuals. Relics Pass holders get access to the Relic Room and a number of ever-growing benefits.
 			</div>
 		</>
 	);
