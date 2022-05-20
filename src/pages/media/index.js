@@ -25,6 +25,7 @@ import bh15 from '../../assets/images/media-page/bh15.jpg';
 import bh16 from '../../assets/images/media-page/bh16.jpg';
 import bh17 from '../../assets/images/media-page/bh17.jpg';
 import bh18 from '../../assets/images/media-page/bh18.jpg';
+import keepgoing from '../../assets/images/media-page/publications/keepgoing.jpg';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
@@ -143,6 +144,41 @@ const SECTIONS = [
                 href: 'https://vimeo.com/399941847'
             },
         ]
+    }, {
+        title: 'Publications / Blogs',
+        content: [
+            {
+                title: 'Metarelics Partners with VeeFriends as First Official Physical Art Partner',
+                image: bh1,
+                href: 'https://www.one37pm.com/nft/metarelics-veefriends-jeff-cole-interview',
+                // tag: 'Blog'
+            },
+            {
+                title: 'The Past, Present and Future of Ikonick + Metarelics',
+                image: bh1,
+                href: 'https://losangeles.shopify.com/metarelics0513'
+            },
+            {
+                title: "There's More to Jeff Cole Than Sick Sneaker Drawings and a Big Social Following",
+                image: bh1,
+                href: 'https://www.complex.com/pop-culture/2020/02/jeff-cole-ikonick-inspirational-art-canvases'
+            },
+            {
+                title: 'From AND1 To The NBA. How IKONICK Co-Founders Jeff Cole And Mark Mastrandrea Are Inspiring The World Through Pop Culture',
+                image: bh1,
+                href: 'https://www.forbes.com/sites/cassellferere/2021/01/28/from-and1-to-the-nba-how-ikonick-co-founders-jeff-cole-and-mark-mastrandrea-are-inspiring-the-world-through-pop-culture/?sh=51dbdd1155b0'
+            },
+            {
+                title: 'How This Online Art Company Grew to 8-Figures in 3 Years By Tapping Engaged Creator Audiences',
+                image: keepgoing,
+                href: 'https://medium.datadriveninvestor.com/how-the-ecomm-art-brand-ikonick-grew-to-8-figures-in-3-years-by-tapping-engaged-creator-audiences-453fb094bb47'
+            },
+            {
+                title: 'How Jeff Cole Influences Culture Through Art',
+                image: bh1,
+                href: 'https://www.contrastmag.com/jeff-cole/'
+            }
+        ]
     }
 ]
 
@@ -154,6 +190,8 @@ const Home = () => {
             setWidth(window.innerWidth);
         });
     }, []);
+
+    const isMobile = width < 1000;
 	
 	return (
 		<>
@@ -178,22 +216,38 @@ const Home = () => {
                             marginBottom: 40
                         }}>{section.title}</h2>
                         <div className='section-content'>
-                            {section.content.map(({title, image, description, href}) => (
+                            {section.content.map(({title, image, description, href, tag}) => (
                                 <a key={title} href={href} target='_blank' rel='noopener noreferrer'>
                                     <CCard className='mb-3 text-white fk-margin' style={{background: 'none', borderRadius: 15}}>
                                         <CCardImage src={image} style={{borderRadius: 15}} />
                                         <CCardImageOverlay style={{
                                             display: 'flex',
                                             borderRadius: 15,
-                                            flexDirection: 'column',
-                                            alignItems: 'start',
-                                            justifyContent: 'flex-end',
+                                            flexDirection: tag !== undefined ? 'row' : 'column',
+                                            alignItems: tag !== undefined ? 'end' : 'start',
+                                            justifyContent: tag !== undefined ? 'space-between' : 'flex-end',
                                             paddingBottom: 20,
-                                            background: 'linear-gradient(180deg, rgba(0,0,0,0) 54.69%, rgba(0, 0, 0, 0.68) 100%)',
-                                            textAlign: 'left'
+                                            background: 'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0, 0, 0, 0.8) 100%)',
+                                            textAlign: 'left',
+                                            columnGap: 10
                                         }}>
-                                            <CCardTitle>{title}</CCardTitle>
-                                            <CCardText>{description}</CCardText>
+                                            <CCardTitle style={{
+                                                marginBottom: (tag || description === undefined) ? 0 : '0.5rem',
+                                                fontSize: tag ? (isMobile ? 12 : 15) : (description === undefined || isMobile ? 15 : 20)
+                                            }}>{title}</CCardTitle>
+                                            {description && <CCardText>{description}</CCardText>}
+                                            {tag && <div style={{
+                                                marginRight: 15,
+                                                width: '15%',
+                                                backgroundColor: '#111319',
+                                                textAlign: 'center',
+                                                borderRadius: 15,
+                                                padding: '10px 30px',
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                lineHeight: '100%'
+                                            }}><div>{tag}</div></div>}
                                         </CCardImageOverlay>
                                     </CCard>
                                     {/* <div
