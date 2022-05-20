@@ -5,6 +5,7 @@ import spinningCube from '../../assets/images/spinning-cube.gif';
 import { DISCORD_URL, INSTAGRAM_URL, OPENSEA_URL, OWNER_PORTAL_URL, TWITTER_URL } from '../../constants';
 import benefits from '../../assets/pdfs/metarelics-benefits.pdf';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
@@ -42,6 +43,9 @@ const Home = () => {
 						<img src={logo} alt={"Metarelics Logo"} />
 					</div>
 					<div className='portal-button-container'>
+						<NavLink to='/media'>
+							<button className='owner-portal-button'>MEDIA</button>
+						</NavLink>
 						<a href={OWNER_PORTAL_URL} target="_blank" rel="noopener noreferrer">
 							<button className='owner-portal-button'>OWNER PORTAL</button>
 						</a>

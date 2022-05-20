@@ -2,6 +2,11 @@
 	overflow: hidden;
 } */
 
+.portal-button-container {
+	display: flex;
+	column-gap: 10px;
+}
+
 .owner-portal-button {
 	background: none;
 	border: 2px solid white;
