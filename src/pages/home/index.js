@@ -37,7 +37,7 @@ const Home = () => {
 	return (
 		<>
 			<div className='home'>
-				<div className='top-menu'>
+				<div className='top-menu-1'>
 					<div className='logo'>
 						<img src={logo} alt={"Metarelics Logo"} />
 					</div>
