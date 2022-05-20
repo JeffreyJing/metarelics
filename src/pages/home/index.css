@@ -100,12 +100,13 @@
 }
 
 .bottom-content {
-	width: calc(100% - 10vh);
+	/* width: calc(100% - 10vh); */
 	padding: 5vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	z-index: 1;
+	margin: 0px;
 }
 
 .text-us-at p {
@@ -123,6 +124,7 @@
 		flex-direction: column;
 		row-gap: 5vh;
 		padding-top: 3vh;
+		padding: 0px;
 	}
 
 	.socials {
