@@ -26,6 +26,11 @@ import bh16 from '../../assets/images/media-page/bh16.jpg';
 import bh17 from '../../assets/images/media-page/bh17.jpg';
 import bh18 from '../../assets/images/media-page/bh18.jpg';
 import keepgoing from '../../assets/images/media-page/publications/keepgoing.jpg';
+import jeffcole from '../../assets/images/media-page/publications/jeffcole.jpg';
+import fireshoes from '../../assets/images/media-page/publications/fireshoes.jpg';
+import monopoly from '../../assets/images/media-page/publications/monopoly.jpg';
+import veecanvas from '../../assets/images/media-page/publications/veecanvas.jpg';
+import warehouse from '../../assets/images/media-page/publications/warehouse.jpg';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
@@ -149,23 +154,23 @@ const SECTIONS = [
         content: [
             {
                 title: 'Metarelics Partners with VeeFriends as First Official Physical Art Partner',
-                image: bh1,
+                image: veecanvas,
                 href: 'https://www.one37pm.com/nft/metarelics-veefriends-jeff-cole-interview',
                 // tag: 'Blog'
             },
             {
                 title: 'The Past, Present and Future of Ikonick + Metarelics',
-                image: bh1,
+                image: warehouse,
                 href: 'https://losangeles.shopify.com/metarelics0513'
             },
             {
                 title: "There's More to Jeff Cole Than Sick Sneaker Drawings and a Big Social Following",
-                image: bh1,
+                image: fireshoes,
                 href: 'https://www.complex.com/pop-culture/2020/02/jeff-cole-ikonick-inspirational-art-canvases'
             },
             {
                 title: 'From AND1 To The NBA. How IKONICK Co-Founders Jeff Cole And Mark Mastrandrea Are Inspiring The World Through Pop Culture',
-                image: bh1,
+                image: monopoly,
                 href: 'https://www.forbes.com/sites/cassellferere/2021/01/28/from-and1-to-the-nba-how-ikonick-co-founders-jeff-cole-and-mark-mastrandrea-are-inspiring-the-world-through-pop-culture/?sh=51dbdd1155b0'
             },
             {
@@ -175,7 +180,7 @@ const SECTIONS = [
             },
             {
                 title: 'How Jeff Cole Influences Culture Through Art',
-                image: bh1,
+                image: jeffcole,
                 href: 'https://www.contrastmag.com/jeff-cole/'
             }
         ]
