@@ -43,9 +43,9 @@ const Home = () => {
 						<img src={logo} alt={"Metarelics Logo"} />
 					</div>
 					<div className='portal-button-container'>
-						<NavLink to='/media'>
+						{/* <NavLink to='/media'>
 							<button className='owner-portal-button'>MEDIA</button>
-						</NavLink>
+						</NavLink> */}
 						<a href={OWNER_PORTAL_URL} target="_blank" rel="noopener noreferrer">
 							<button className='owner-portal-button'>OWNER PORTAL</button>
 						</a>
