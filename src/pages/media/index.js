@@ -35,6 +35,7 @@ import warehouse from '../../assets/images/media-page/publications/warehouse.jpg
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 const SECTIONS = [
     {
@@ -203,7 +204,7 @@ const Home = () => {
 			<div className='home-media'>
 				<div className='top-menu'>
 					<div className='logo'>
-						<img src={logo} alt={"Metarelics Logo"} />
+						<NavLink to='/'><img src={logo} alt={"Metarelics Logo"} /></NavLink>
 					</div>
                     <div className='all-medias'>
                         ALL MEDIAS
