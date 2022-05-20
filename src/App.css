@@ -8,6 +8,10 @@
 	src: url(./assets/fonts/interstatelight.otf) format('opentype');
 }
 
+*, :after, :before {
+	box-sizing: unset;
+}
+
 :root {
 	--main-color: white;
 	--hover-color: rgb(112, 109, 109);
