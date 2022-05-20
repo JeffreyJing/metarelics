@@ -19,11 +19,11 @@
 }
 
 html, body {
-	/* background-color: black; */
+	background-color: black;
 	font-family: 'Interstate Light', Helvetica, sans-serif;
 	color: var(--main-color);
-	padding: 0px;
-	margin: 0px;
+	padding: 0px !important;
+	margin: 0px !important;
 	overflow-x: hidden;
 }
 
@@ -57,6 +57,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 1000px) {
 	button {
-		font-size: 12px;
+		font-size: 12px !important;
 	}
 }

@@ -7,7 +7,25 @@ import benefits from '../../assets/pdfs/metarelics-benefits.pdf';
 
 import { CCard, CCardImage, CCardImageOverlay, CCardTitle, CCardText } from '@coreui/react';
 
-import punksBanner from '../../assets/images/punks-banner.png';
+import bh1 from '../../assets/images/media-page/bh1.jpg';
+import bh2 from '../../assets/images/media-page/bh2.jpg';
+import bh3 from '../../assets/images/media-page/bh3.jpg';
+import bh4 from '../../assets/images/media-page/bh4.jpg';
+import bh5 from '../../assets/images/media-page/bh5.jpg';
+import bh6 from '../../assets/images/media-page/bh6.jpg';
+import bh7 from '../../assets/images/media-page/bh7.jpg';
+import bh8 from '../../assets/images/media-page/bh8.jpg';
+import bh9 from '../../assets/images/media-page/bh9.jpg';
+import bh10 from '../../assets/images/media-page/bh10.jpg';
+import bh11 from '../../assets/images/media-page/bh11.jpg';
+import bh12 from '../../assets/images/media-page/bh12.jpg';
+import bh13 from '../../assets/images/media-page/bh13.jpg';
+import bh14 from '../../assets/images/media-page/bh14.jpg';
+import bh15 from '../../assets/images/media-page/bh15.jpg';
+import bh16 from '../../assets/images/media-page/bh16.jpg';
+import bh17 from '../../assets/images/media-page/bh17.jpg';
+import bh18 from '../../assets/images/media-page/bh18.jpg';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './index.css';
@@ -17,40 +35,112 @@ const SECTIONS = [
         title: 'Behind the Hustle',
         content: [
             {
-                title: 'Title',
-                image: punksBanner,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #18',
+                image: bh18,
+                description: 'Extra Episode',
+                href: 'https://vimeo.com/402612465'
             },
             {
-                title: 'Title',
-                image: logo,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #17',
+                image: bh17,
+                description: 'Talent, Trust, & Empower',
+                href: 'https://vimeo.com/402454923'
             },
             {
-                title: 'Title',
-                image: logo,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #16',
+                image: bh16,
+                description: 'Do More',
+                href: 'https://vimeo.com/402444022'
             },
             {
-                title: 'Title',
-                image: logo,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #15',
+                image: bh15,
+                description: 'Rest At The End',
+                href: 'https://vimeo.com/402451306'
             },
             {
-                title: 'Title',
-                image: logo,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #14',
+                image: bh14,
+                description: 'The Third Door',
+                href: 'https://vimeo.com/402448041'
             },
             {
-                title: 'Title',
-                image: logo,
-                description: 'description',
-                href: 'https://placeholder.com'
+                title: 'Behind the Hustle #13',
+                image: bh13,
+                description: '53 Minutes With Gary Vee',
+                href: 'https://vimeo.com/400332073'
+            },
+            {
+                title: 'Behind the Hustle #12',
+                image: bh12,
+                description: 'Momentum',
+                href: 'https://vimeo.com/400331881'
+            },
+            {
+                title: 'Behind the Hustle #11',
+                image: bh11,
+                description: 'One Week In Miami',
+                href: 'https://vimeo.com/400331715'
+            },
+            {
+                title: 'Behind the Hustle #10',
+                image: bh10,
+                description: 'Growing A Personal Brand',
+                href: 'https://vimeo.com/400330851'
+            },
+            {
+                title: 'Behind the Hustle #9',
+                image: bh9,
+                description: 'On The Move',
+                href: 'https://vimeo.com/400330471'
+            },
+            {
+                title: 'Behind the Hustle #8',
+                image: bh8,
+                description: 'Burgers and Business',
+                href: 'https://vimeo.com/400330048'
+            },
+            {
+                title: 'Behind the Hustle #7',
+                image: bh7,
+                description: 'Collaboration is Key',
+                href: 'https://vimeo.com/400329361'
+            },
+            {
+                title: 'Behind the Hustle #6',
+                image: bh6,
+                description: 'Sit Down with Scooter Braun',
+                href: 'https://vimeo.com/400327627'
+            },
+            {
+                title: 'Behind the Hustle #5',
+                image: bh5,
+                description: 'New York State of Mind',
+                href: 'https://vimeo.com/400154710'
+            },
+            {
+                title: 'Behind the Hustle #4',
+                image: bh4,
+                description: 'Making Money With Friends',
+                href: 'https://vimeo.com/400150340'
+            },
+            {
+                title: 'Behind the Hustle #3',
+                image: bh3,
+                description: 'IKONICK visits Rick Ross',
+                href: 'https://vimeo.com/400144820'
+            },
+            {
+                title: 'Behind the Hustle #2',
+                image: bh2,
+                description: 'All In',
+                href: 'https://vimeo.com/400141333'
+            },
+            {
+                title: 'Behind the Hustle #1',
+                image: bh16,
+                description: 'The Origin',
+                href: 'https://vimeo.com/399941847'
             },
         ]
     }
@@ -67,7 +157,7 @@ const Home = () => {
 	
 	return (
 		<>
-			<div className='home'>
+			<div className='home-media'>
 				<div className='top-menu'>
 					<div className='logo'>
 						<img src={logo} alt={"Metarelics Logo"} />
@@ -84,20 +174,23 @@ const Home = () => {
 
                 {SECTIONS.map((section) => (
                     <div className='section' key={section.title}>
-                        <h2>{section.title}</h2>
+                        <h2 style={{
+                            marginBottom: 40
+                        }}>{section.title}</h2>
                         <div className='section-content'>
                             {section.content.map(({title, image, description, href}) => (
                                 <a key={title} href={href} target='_blank' rel='noopener noreferrer'>
-                                    <CCard className='mb-3 bg-dark text-white' style={{borderRadius: 30}}>
-                                        <CCardImage src={image} style={{borderRadius: 30}} />
+                                    <CCard className='mb-3 text-white fk-margin' style={{background: 'none', borderRadius: 15}}>
+                                        <CCardImage src={image} style={{borderRadius: 15}} />
                                         <CCardImageOverlay style={{
                                             display: 'flex',
-                                            borderRadius: 30,
+                                            borderRadius: 15,
                                             flexDirection: 'column',
                                             alignItems: 'start',
                                             justifyContent: 'flex-end',
                                             paddingBottom: 20,
-                                            background: 'linear-gradient(180deg, rgba(0,0,0,0) 54.69%, rgba(0, 0, 0, 0.68) 100%)'
+                                            background: 'linear-gradient(180deg, rgba(0,0,0,0) 54.69%, rgba(0, 0, 0, 0.68) 100%)',
+                                            textAlign: 'left'
                                         }}>
                                             <CCardTitle>{title}</CCardTitle>
                                             <CCardText>{description}</CCardText>

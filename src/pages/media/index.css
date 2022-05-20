@@ -2,6 +2,10 @@ body {
 	/* overflow: hidden; */
 }
 
+.fk-margin {
+	margin: 0px !important;
+}
+
 h2 {
     color: white !important;
 }
@@ -11,6 +15,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     margin: 40px;
+	margin-bottom: 0px;
 }
 
 .section-content {
@@ -30,15 +35,17 @@ h2 {
 	border: 2px solid white;
 }
 
-.home {
+.home-media {
 	background-image: url(../../assets/images/bg.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 100vh;
-	width: 100vw;
+	/* height: 100vh;
+	width: 100vw; */
 	/* overflow: hidden; */
 	text-align: center;
     background-color: black;
+	margin-bottom: 0px !important;
+	padding-bottom: 100px;
 }
 
 .all-medias {
@@ -88,6 +95,7 @@ h2 {
 		flex-direction: column;
 		row-gap: 5vh;
 		padding-top: 3vh;
+		width: 100%;
 	}
 
 	.socials {
@@ -124,5 +132,14 @@ h2 {
 	.description {
 		width: 90%;
 		font-size: 12px;
+	}
+
+	.owner-portal-button {
+		font-size: 10px !important;
+		padding: 5px 10px !important;
+	}
+
+	.all-medias {
+		font-size: 20px;
 	}
 }
