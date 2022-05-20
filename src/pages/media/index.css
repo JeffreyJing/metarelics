@@ -75,6 +75,15 @@ h2 {
 
 
 @media screen and (max-width: 1000px) {
+
+    .section-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 50px;
+        row-gap: 50px;
+    }
+
 	.bottom-content {
 		flex-direction: column;
 		row-gap: 5vh;
