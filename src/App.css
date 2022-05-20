@@ -30,15 +30,15 @@ html, body {
 button {
 	/* background: linear-gradient(to right, var(--button-color-2), var(--button-color)); */
 	background-color: #111319;
-	color: var(--main-color);
+	color: var(--main-color) !important;
 	/* border: 2px solid var(--main-color); */
 	border: none;
-	border-radius: 8px;
-	padding: 10px 30px;
+	border-radius: 8px !important;
+	padding: 10px 30px !important;
 	cursor: pointer;
-	font-family: 'Interstate Bold', Helvetica, sans-serif;
+	font-family: 'Interstate Bold', Helvetica, sans-serif !important;
 	/* width: 70%; */
-	font-size: 20px;
+	font-size: 20px !important;
 
 	transition: box-shadow 250ms ease;
 }
