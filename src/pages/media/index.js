@@ -39,6 +39,7 @@ import { NavLink } from 'react-router-dom';
 
 const SECTIONS = [
     {
+        id: 'bth',
         title: 'Behind the Hustle',
         content: [
             {
@@ -190,6 +191,7 @@ const SECTIONS = [
 
 const Home = () => {
 	const [width, setWidth] = useState(window.innerWidth);
+    const [bthExpanded, setBthExpanded] = useState(false);
 
 	useEffect(() => {
         window.addEventListener("resize", () => {
@@ -222,81 +224,53 @@ const Home = () => {
                             marginBottom: 40
                         }}>{section.title}</h2>
                         <div className='section-content'>
-                            {section.content.map(({title, image, description, href, tag}) => (
-                                <a key={title} href={href} target='_blank' rel='noopener noreferrer'>
-                                    <CCard className='mb-3 text-white fk-margin' style={{background: 'none', borderRadius: 15}}>
-                                        <CCardImage src={image} style={{borderRadius: 15}} />
-                                        <CCardImageOverlay style={{
-                                            display: 'flex',
-                                            borderRadius: 15,
-                                            flexDirection: tag !== undefined ? 'row' : 'column',
-                                            alignItems: tag !== undefined ? 'end' : 'start',
-                                            justifyContent: tag !== undefined ? 'space-between' : 'flex-end',
-                                            paddingBottom: 20,
-                                            background: 'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0, 0, 0, 0.8) 100%)',
-                                            textAlign: 'left',
-                                            columnGap: 10
-                                        }}>
-                                            <CCardTitle style={{
-                                                marginBottom: (tag || description === undefined) ? 0 : '0.5rem',
-                                                fontSize: tag ? (isMobile ? 12 : 15) : (description === undefined || isMobile ? 15 : 20)
-                                            }}>{title}</CCardTitle>
-                                            {description && <CCardText>{description}</CCardText>}
-                                            {tag && <div style={{
-                                                marginRight: 15,
-                                                width: '15%',
-                                                backgroundColor: '#111319',
-                                                textAlign: 'center',
-                                                borderRadius: 15,
-                                                padding: '10px 30px',
+                            {section.content.map(({title, image, description, href, tag}, i) => {
+                                if (!bthExpanded && i > 5) {
+                                    return;
+                                }
+
+                                return (
+                                    <a key={title} href={href} target='_blank' rel='noopener noreferrer'>
+                                        <CCard className='mb-3 text-white fk-margin' style={{background: 'none', borderRadius: 15}}>
+                                            <CCardImage src={image} style={{borderRadius: 15}} />
+                                            <CCardImageOverlay style={{
                                                 display: 'flex',
-                                                justifyContent: 'center',
-                                                alignItems: 'center',
-                                                lineHeight: '100%'
-                                            }}><div>{tag}</div></div>}
-                                        </CCardImageOverlay>
-                                    </CCard>
-                                    {/* <div
-                                    className='section-content-item'
-                                    key={title}
-                                    style={{
-                                        height: 270,
-                                        width: '100%',
-                                        position: 'relative',
-                                        overflow: 'hidden',
-                                        borderRadius: 20,
-                                    }}
-                                >
-                                    <img src={image} style={{
-                                        position: 'absolute',
-                                        width: '100%',
-                                        height: 'auto',
-                                        top: 0,
-                                        left: 0,
-                                        zIndex: 1
-                                    }} />
-                                    <div style={{
-                                        position: 'absolute',
-                                        width: '100%',
-                                        height: '100%',
-                                        top: 0,
-                                        left: 0,
-                                        display: 'flex',
-                                        textDecoration: 'unset',
-                                        zIndex: 999,
-                                        justifyContent: 'flex-end',
-                                        flexDirection: 'column',
-                                        alignItems: 'start',
-                                        rowGap: 20,
-                                        background: 'linear-gradient(180deg, rgba(0,0,0,0) 54.69%, rgba(0, 0, 0, 0.68) 100%)'
-                                    }} className={'style-overrides'}>
-                                        <h2 style={{margin: 0, marginLeft: 20}}>{title}</h2>
-                                        <p style={{margin: 0, marginLeft: 20, marginBottom: 20}}>{description}</p>
-                                    </div>
-                                </div> */}
-                                </a>
-                            ))}
+                                                borderRadius: 15,
+                                                flexDirection: tag !== undefined ? 'row' : 'column',
+                                                alignItems: tag !== undefined ? 'end' : 'start',
+                                                justifyContent: tag !== undefined ? 'space-between' : 'flex-end',
+                                                paddingBottom: 20,
+                                                background: 'linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0, 0, 0, 0.8) 100%)',
+                                                textAlign: 'left',
+                                                columnGap: 10
+                                            }}>
+                                                <CCardTitle style={{
+                                                    marginBottom: (tag || description === undefined) ? 0 : '0.5rem',
+                                                    fontSize: tag ? (isMobile ? 12 : 15) : (description === undefined || isMobile ? 15 : 20)
+                                                }}>{title}</CCardTitle>
+                                                {description && <CCardText>{description}</CCardText>}
+                                                {tag && <div style={{
+                                                    marginRight: 15,
+                                                    width: '15%',
+                                                    backgroundColor: '#111319',
+                                                    textAlign: 'center',
+                                                    borderRadius: 15,
+                                                    padding: '10px 30px',
+                                                    display: 'flex',
+                                                    justifyContent: 'center',
+                                                    alignItems: 'center',
+                                                    lineHeight: '100%'
+                                                }}><div>{tag}</div></div>}
+                                            </CCardImageOverlay>
+                                        </CCard>
+                                    </a>
+                                );
+                            })}
                         </div>
+
+                        {section.id === 'bth' && (
+                            <button className='bth-expand' onClick={() => setBthExpanded(!bthExpanded)}>{bthExpanded ? 'HIDE' : 'SHOW MORE' }</button>
+                        )}
                     </div>
                 ))}
 				
@@ -307,9 +281,7 @@ const Home = () => {
 					</div>
 				</div>
 				{/* {width > 1000 && midContent} */}
-				{/* <div className='bottom'>
-					{/* {width <= 1000 && midContent} */}
-					{/* {midContent}
+				<div className='bottom'>
 					<div className='bottom-content'>
 						<div className='text-us-at'>
 							<p>Text us at</p>
@@ -330,7 +302,7 @@ const Home = () => {
 							</a>
 						</div>
 					</div>
-				</div>  */}
+				</div> 
 			</div>
 		</>
 	);

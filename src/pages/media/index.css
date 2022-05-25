@@ -26,6 +26,11 @@ h2 {
     row-gap: 50px;
 }
 
+.bth-expand {
+	margin: auto;
+	margin-top: 20px;
+}
+
 .section-content-item:hover, .style-overrides:hover {
     color: white !important
 }
